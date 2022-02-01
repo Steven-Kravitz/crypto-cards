@@ -14,14 +14,56 @@ fetch('https://api.pokemontcg.io/v2/cards',{
     console.log(data.data[0]);
 })
 
-var crypto =['BTC', 'ETH', 'UDST']
-for(var i=0; i<crypto.length; i++){
-    console.log(i)
-fetch(	'https://rest.coinapi.io/v1/exchangerate/'+crypto[i]+'/USD?apikey=EE0B3E38-CFD9-4BEE-8F5D-BF82AE6DD7BF')
+
+
+
+//              0    1       2
+//Add more cryptos for later
+var cryptoS =['BTC', 'ETH', 'USDT']
+// var cryptoInfo ={
+//     cryptoID: data.asset_id_quote,
+//     cryptoRate: data.rate
+//     // data.rate + ":" + data.asset_id_quote
+// }
+var cryptoInfo ={}
+for(var i=0; i<cryptoS.length; i++){
+//console.log(i);
+fetch(	'https://rest.coinapi.io/v1/exchangerate/USD/'+cryptoS[i]+'?apikey=EE0B3E38-CFD9-4BEE-8F5D-BF82AE6DD7BF')
 .then(function(response){
     return response.json()
 })
 .then(function(data){
-    console.log(data);
+   // console.log(data.rate); 
+    //console.log(data.asset_id_quote);
+    cryptoInfo[data.asset_id_quote]=data.rate
 })
-}
+sleep(500)
+};
+console.log(cryptoInfo);
+
+
+// fetch(	'https://rest.coinapi.io/v1/exchangerate/USD/ETH?apikey=EE0B3E38-CFD9-4BEE-8F5D-BF82AE6DD7BF')
+// .then(function(response){
+//     return response.json()
+// })
+// .then(function(data){
+//     console.log(data);
+// })
+// sleep(500)
+// fetch(	'https://rest.coinapi.io/v1/exchangerate/USD/USDT?apikey=EE0B3E38-CFD9-4BEE-8F5D-BF82AE6DD7BF')
+// .then(function(response){
+//     return response.json()
+// })
+// .then(function(data){
+//     console.log(data);
+// })
+
+//https://www.sitepoint.com/delay-sleep-pause-wait/
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+  }
+  

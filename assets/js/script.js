@@ -19,16 +19,16 @@ fetch('https://api.pokemontcg.io/v2/cards',{
 
 //              0    1       2
 //Add more cryptos for later
-var cryptoS =['BTC', 'ETH', 'USDT']
+var cryptoTickers =['BTC', 'ETH', 'USDT']
 // var cryptoInfo ={
 //     cryptoID: data.asset_id_quote,
 //     cryptoRate: data.rate
 //     // data.rate + ":" + data.asset_id_quote
 // }
 var cryptoInfo ={}
-for(var i=0; i<cryptoS.length; i++){
+for(var i=0; i<cryptoTickers.length; i++){
 //console.log(i);
-fetch(	'https://rest.coinapi.io/v1/exchangerate/USD/'+cryptoS[i]+'?apikey=EE0B3E38-CFD9-4BEE-8F5D-BF82AE6DD7BF')
+fetch(	'https://rest.coinapi.io/v1/exchangerate/USD/'+cryptoTickers[i]+'?apikey=EE0B3E38-CFD9-4BEE-8F5D-BF82AE6DD7BF')
 .then(function(response){
     return response.json()
 })

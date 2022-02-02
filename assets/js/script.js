@@ -1,5 +1,5 @@
 // POKEMON
-var userInput='pikachu';
+var userInput='ampharos';
 // Getting the first 250 cards
 fetch(`https://api.pokemontcg.io/v2/cards?q=name:${userInput}`,{
     headers:{
@@ -13,10 +13,12 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=name:${userInput}`,{
     })
 // Drilling down to the first entry
     .then(function(data){
-        console.log(data.data[0]);
-        console.log(data.data[0].name)
-        console.log(data.data[0].images)
-
+        for (i = 0; i < data.data.length; i++){
+        console.log(data.data[i]);
+        console.log(data.data[i].name)
+        console.log(data.data[i].images.large)
+        console.log(data.data[i].tcgplayer.prices)
+    }
     })
 
 //Attributes we need from tcgpokemonapi. tcgplayer (pricing), name, images, 

@@ -22,11 +22,11 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=name:${userInput}`,{
         console.log(data.data[i].images.large)
         //console.log(data.data[i].tcgplayer.prices)
         var imageURL=data.data[i].images.large
+        var pokeID=data.data[i].id
         $(`<div class="col">
         <div class="card">
-        <a href="results.html">
-            <img class="card-img-top" src="${imageURL}">
-        </a>
+            <img class="card-img-top cardClick " data-pokeID=${pokeID} src="${imageURL}">
+
         </div>
     </div>`).appendTo("#cardContainer")
     }
@@ -38,4 +38,12 @@ $("#userSearchBtn").on('click',function(event){
     userInput= $("#userSearch").val();
     localStorage.setItem("userInput",JSON.stringify(userInput))
     getCards(userInput);
+})
+
+$("#cardContainer").on('click',".cardClick", function(event){
+    var element =event.target
+    console.log(element)
+    var pokeID=element.dataset.pokeid;
+    localStorage.setItem('pokeID',pokeID)
+    console.log(pokeID);
 })

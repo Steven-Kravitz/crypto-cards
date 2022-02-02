@@ -3,7 +3,7 @@ var userBtn = $("#userSearchBtn")
 var userInput= $("#userSearch").val();
 userBtn.on('click',function(event){
 event.preventDefault();
-
+window.location.assign(href="search.html")
 userInput= $("#userSearch").val();
 console.log(userInput);
 // Getting the first 250 cards

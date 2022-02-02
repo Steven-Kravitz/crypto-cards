@@ -1,5 +1,6 @@
 
 var userInput=JSON.parse(localStorage.getItem("userInput"))
+userInput="pikachu"
 // Getting the first 250 cards
 fetch(`https://api.pokemontcg.io/v2/cards?q=name:${userInput}`,{
     headers:{
@@ -17,6 +18,14 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=name:${userInput}`,{
         console.log(data.data[i]);
         console.log(data.data[i].name)
         console.log(data.data[i].images.large)
-        console.log(data.data[i].tcgplayer.prices)
+        //console.log(data.data[i].tcgplayer.prices)
+        var imageURL=data.data[i].images.large
+        $(`<div class="col">
+        <div class="card">
+        <a href="results.html">
+            <img class="card-img-top" src="${imageURL}">
+        </a>
+        </div>
+    </div>`).appendTo("#cardContainer")
     }
     })

@@ -3,30 +3,32 @@ var userBtn = $("#userSearchBtn")
 var userInput= $("#userSearch").val();
 userBtn.on('click',function(event){
 event.preventDefault();
-window.location.assign(href="search.html")
 userInput= $("#userSearch").val();
-console.log(userInput);
-// Getting the first 250 cards
-fetch(`https://api.pokemontcg.io/v2/cards?q=name:${userInput}`,{
-    headers:{
-        "Content-Type":"application/json",
-        "X-Api-Key": "e8bdc35b-8907-45b0-b1c1-eb5d3cd116a6"
-    }
-})
-// Turning into the json object
-    .then(function(response){
-        return response.json()
-    })
-// Drilling down to the first entry
-    .then(function(data){
-        for (i = 0; i < data.data.length; i++){
-        console.log(data.data[i]);
-        console.log(data.data[i].name)
-        console.log(data.data[i].images.large)
-        console.log(data.data[i].tcgplayer.prices)
-    }
-    })
+localStorage.setItem("userInput",JSON.stringify(userInput))
+window.location.assign(href="search.html")
 });
+
+// // Getting the first 250 cards
+// fetch(`https://api.pokemontcg.io/v2/cards?q=name:${userInput}`,{
+//     headers:{
+//         "Content-Type":"application/json",
+//         "X-Api-Key": "e8bdc35b-8907-45b0-b1c1-eb5d3cd116a6"
+//     }
+// })
+// // Turning into the json object
+//     .then(function(response){
+//         return response.json()
+//     })
+// // Drilling down to the first entry
+//     .then(function(data){
+//         for (i = 0; i < data.data.length; i++){
+//         console.log(data.data[i]);
+//         console.log(data.data[i].name)
+//         console.log(data.data[i].images.large)
+//         console.log(data.data[i].tcgplayer.prices)
+//     }
+//     })
+
 //Attributes we need from tcgpokemonapi. tcgplayer (pricing), name, images, 
 
     

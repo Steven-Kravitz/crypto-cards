@@ -1,5 +1,11 @@
 // POKEMON
-var userInput='ampharos';
+var userBtn = $("#userSearchBtn")
+var userInput= $("#userSearch").val();
+userBtn.on('click',function(event){
+event.preventDefault();
+
+userInput= $("#userSearch").val();
+console.log(userInput);
 // Getting the first 250 cards
 fetch(`https://api.pokemontcg.io/v2/cards?q=name:${userInput}`,{
     headers:{
@@ -20,7 +26,7 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=name:${userInput}`,{
         console.log(data.data[i].tcgplayer.prices)
     }
     })
-
+});
 //Attributes we need from tcgpokemonapi. tcgplayer (pricing), name, images, 
 
     

@@ -1,6 +1,8 @@
 
 var userInput=JSON.parse(localStorage.getItem("userInput"))
-userInput="pikachu"
+getCards(userInput);
+
+function getCards(userInput){
 // Getting the first 250 cards
 fetch(`https://api.pokemontcg.io/v2/cards?q=name:${userInput}`,{
     headers:{
@@ -29,3 +31,11 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=name:${userInput}`,{
     </div>`).appendTo("#cardContainer")
     }
     })
+}
+$("#userSearchBtn").on('click',function(event){
+    event.preventDefault();
+    $("#cardContainer").empty();
+    userInput= $("#userSearch").val();
+    localStorage.setItem("userInput",JSON.stringify(userInput))
+    getCards(userInput);
+})

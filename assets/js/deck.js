@@ -1,4 +1,4 @@
-var deckInput= ["xy1-1", "xyp-XY171", "ex10-1", "mcd18-4", "base6-5"]
+var deckInput= ["xy1-1", "xyp-XY171", "ex10-1", "base6-5"]
 // JSON.parse(localStorage.getItem("deckCard"))
 // getCards(deckInput);
 getCards(deckInput)
@@ -17,25 +17,55 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
     })
 // Drilling down to the first entry
     .then(function(data){
-        for (i = 0; i < data.data.length; i++){
-        console.log(data.data[i]);
-        console.log(data.data[i].name)
-        console.log(data.data[i].images.small)
-        //console.log(data.data[i].tcgplayer.prices)
-        var cardImage=data.data[i].images.small
-        var pokeName=data.data[i].name
-        var pokePrice=data.data[i].tcgplayer
+        for (j = 0; j < data.data.length; j++){
+        console.log(data.data[j]);
+        // console.log(data.data[j].name)
+        // console.log(data.data[j].images.small)
+        // console.log(data.data[j].tcgplayer.prices)
+        var cardImage=data.data[j].images.small
+        var pokeName=data.data[j].name
 
 
+
+    
     $(
-        `<div class="container col cardInfoContainer">
-            <div class="row">
+        `<div class="container col ">
+            <div class="row cardInfoContainer">
             <img class="card-img card" src="${cardImage}">
             <h2 class="pokeName">${pokeName}</h2>
-            <p class= "pokePrice">${pokePrice}</p>
             </div>
         </div>
     </div>`).appendTo("#deckBuilder")
+    
+    if ("normal" in data.data[j].tcgplayer.prices){
+        var normalPrices=data.data[j].tcgplayer.prices.normal;
+        $(`<p class="pokePrice">${normalPrices.market} USD</p>`).appendTo(".cardInfoContainer")
+        //console.log("normal is in the price list");
+       }
+       
+       if ("holofoil" in data.data[j].tcgplayer.prices){
+        var holofoilPrices=data.data[j].tcgplayer.prices.holofoil;
+        $(`<p class="">${holofoilPrices.market} USD</p>`).appendTo(".cardInfoContainer")
+       // console.log("holofoil is in the price list");
+       }
+
+       if ("reverseHolofoil" in data.data[j].tcgplayer.prices){
+        var reverseHolofoilPrices=data.data[j].tcgplayer.prices.reverseHolofoil;
+        $(`<p class="">${reverseHolofoilPrices.market} USD</p>`).appendTo(".cardInfoContainer")
+        //console.log("reverseHolofoil is in the price list");
+       }
+
+       if ("1stEditionHolofoil" in data.data[j].tcgplayer.prices){
+        var firststEditionHolofoil=data.data[j].tcgplayer.prices["1stEditionHolofoil"] ;
+        $(`<p class="">${firststEditionHolofoil.market} USD</p>`).appendTo(".cardInfoContainer")
+        //console.log("1stEditionHolofoil is in the price list");
+       }
+
+       if ("1stEditionNormal" in data.data[j].tcgplayer.prices){
+        var firstEditionNormal =data.data[j].tcgplayer.prices["1stEditionNormal"];
+        $(`<p class="">${firstEditionNormal.market} USD</p>`).appendTo(".cardInfoContainer")
+        //console.log("1stEditionNormal is in the price list");
+       }
 
         // $(`<div class="row">
         //     <p class="pokeName">${pokeName}</p>  

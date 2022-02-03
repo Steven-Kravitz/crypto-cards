@@ -24,7 +24,7 @@ function getSet(chosenSetId){
             //Populating the cards for the set to the page
             var imageSetsURL=data.data[i].images.large
             var setsID=data.data[i].id
-            $(`<div class="container col">
+            $(`<div class="container col" id="change">
                     <div class="row card mt-5">
                         <img class="card-img cardClick" data-setID=${setsID} src="${imageSetsURL}">
                     </div>

@@ -1,3 +1,4 @@
+// Getting the data from the API
 fetch('https://api.pokemontcg.io/v2/sets')
     .then(function(response){
         return response.json();
@@ -15,11 +16,11 @@ fetch('https://api.pokemontcg.io/v2/sets')
         <p class="setname" data-setid=${setId}>${setName}</p>
         </div>`).appendTo("#all-sets")
 
-
+        // Each word is a button
         $("p").on('click',function(event){
-            //var el = event.target
-            //console.log(el)
-            //var setId = el.dataset.setid;
+            var el = event.target
+            console.log(el)
+            var setId = el.dataset.setid
             localStorage.setItem('setId',JSON.stringify(setId));
             console.log(setId);
         

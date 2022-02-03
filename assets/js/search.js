@@ -1,6 +1,7 @@
 
 var userInput=JSON.parse(localStorage.getItem("userInput"))
 getCards(userInput);
+console.log(userInput)
 
 function getCards(userInput){
 // Getting the first 250 cards

@@ -2,10 +2,10 @@
 var userBtn = $("#userSearchBtn")
 var userInput= $("#userSearch").val();
 userBtn.on('click',function(event){
-event.preventDefault();
-userInput= $("#userSearch").val();
-localStorage.setItem("userInput",JSON.stringify(userInput))
-window.location.assign(href="search.html")
+    event.preventDefault();
+    userInput= $("#userSearch").val();
+    localStorage.setItem("userInput",JSON.stringify(userInput))
+    window.location.assign(href="search.html")
 });
 
 // // Getting the first 250 cards

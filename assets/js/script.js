@@ -34,16 +34,16 @@ window.location.assign(href="search.html")
     
 // COINAPI
 // Add if statement swapping API keys at limit
-var priscillasApi = "612EED13-BBA7-4E82-AF79-78955F897E68" // :)
-var stevensAPI = "865395AE-4F4E-48D5-A825-65822194FDE7" // :D
-var jenAPI = "2FEC7249-7A76-4CEB-AB8B-EEEB43C6F19E" // ^-^
-var chrisAPI = "EE0B3E38-CFD9-4BEE-8F5D-BF82AE6DD7BF" // O.O
+//var priscillasApi = "612EED13-BBA7-4E82-AF79-78955F897E68" // :)
+//var stevensAPI = "865395AE-4F4E-48D5-A825-65822194FDE7" // :D
+//var jenAPI = "2FEC7249-7A76-4CEB-AB8B-EEEB43C6F19E" // ^-^
+//var chrisAPI = "EE0B3E38-CFD9-4BEE-8F5D-BF82AE6DD7BF" // O.O
 
-var coinAPIKeys = [priscillasApi, stevensAPI, jenAPI, chrisAPI]
+//var coinAPIKeys = [priscillasApi, stevensAPI, jenAPI, chrisAPI]
 //              0    1       2
 
 // Add more cryptos for later
-var cryptoTickers = ['BTC', 'ETH', 'USDT']
+//var cryptoTickers = ['BTC', 'ETH', 'USDT']
 // var cryptoInfo ={
 //     cryptoID: data.asset_id_quote,
 //     cryptoRate: data.rate

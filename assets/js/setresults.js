@@ -16,6 +16,11 @@ function getSet(chosenSetId){
 
     .then(function(data){
         console.log(data.data)
+        
+            var setName=data.data[0].set.name
+            $(`<h1 class="set-name">${setName}</h1>`).appendTo(".set-name")
+
+
         for (i = 0; i < data.data.length; i++){
             //console.log(data.data[i]);
             //console.log(data.data[i].name)
@@ -24,17 +29,22 @@ function getSet(chosenSetId){
             //Populating the cards for the set to the page
             var imageSetsURL=data.data[i].images.large
             var setsID=data.data[i].id
+
             $(`<div class="container col" id="change">
                     <div class="row card mt-5">
                         <img class="card-img cardClick" data-setID=${setsID} src="${imageSetsURL}">
                     </div>
                 </div>`).appendTo("#cardContainer")
+            
+            
+            
 
         
 
 
     }})
 }
+
 
 $("#cardContainer").on('click',".cardClick", function(event){
     var element =event.target
@@ -44,6 +54,7 @@ $("#cardContainer").on('click',".cardClick", function(event){
     console.log(pokeID);
     window.location.assign(href="results.html")
 })
+
 
 // Search Button functionality 
 $("#userSearchBtn").on('click',function(event){

@@ -13,7 +13,7 @@ fetch('https://api.pokemontcg.io/v2/sets')
         //console.log(setId)
         //console.log(data.data[i].name)
         $(`<div class"container" id="set-id-name">
-        <p class="setname" data-setid=${setId}>${setName}</p>
+        <p class="setname" data-setid=${setId} data-name=${setName}>${setName}</p>
         </div>`).appendTo("#all-sets")
 
         // Each word is a button

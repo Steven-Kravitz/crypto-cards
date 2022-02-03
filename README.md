@@ -20,7 +20,7 @@ Through this app, you can look up a Pokémon card and see how much of a certain 
 
 <br/>
 
-[Live Project]()
+[Live Project](https://steven-kravitz.github.io/crypto-cards/)
 
 <br/>
 
@@ -34,6 +34,11 @@ Through this app, you can look up a Pokémon card and see how much of a certain 
 
 <br/>
 
+## Wireframe
+
+
+
+<br/>
 
 ## Credits
 

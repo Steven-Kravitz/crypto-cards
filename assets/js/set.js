@@ -27,24 +27,11 @@ fetch('https://api.pokemontcg.io/v2/sets')
             window.location.assign(href="setresults.html")
         })
     }
-    })
-
-
-// this is the js code I got from the api docs. -p☆
-// pokemon.set.all()
-//   .then((sets) => {
-//       console.log(sets[0].name)
-//   })
-
-// sets may be too much at the moment! -priscilla.
-
-
-// $("button").on('click',function(event){
-//     //var el = event.target
-//     //console.log(el)
-//     var setId = el.dataset.setid;
-//     localStorage.setItem('setId',JSON.stringify(setId));
-//     console.log(setId);
-
-//     window.location.assign(href="results.html")
-// })
+})
+// Search Button functionality 
+$("#userSearchBtn").on('click',function(event){
+    event.preventDefault();
+    userInput= $("#userSearch").val();
+    localStorage.setItem("userInput",JSON.stringify(userInput))
+    window.location.assign(href="search.html")
+})

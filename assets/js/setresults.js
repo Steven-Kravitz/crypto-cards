@@ -25,7 +25,7 @@ function getSet(chosenSetId){
             var imageSetsURL=data.data[i].images.large
             var setsID=data.data[i].id
             $(`<div class="container col">
-                    <div class="row card ">
+                    <div class="row card mt-5">
                         <img class="card-img cardClick" data-setID=${setsID} src="${imageSetsURL}">
                     </div>
                 </div>`).appendTo("#cardContainer")
@@ -35,3 +35,20 @@ function getSet(chosenSetId){
 
     }})
 }
+
+$("#cardContainer").on('click',".cardClick", function(event){
+    var element =event.target
+    console.log(element)
+    var pokeID=element.dataset.setid;
+    localStorage.setItem('pokeID',JSON.stringify(pokeID));
+    console.log(pokeID);
+    window.location.assign(href="results.html")
+})
+
+// Search Button functionality 
+$("#userSearchBtn").on('click',function(event){
+    event.preventDefault();
+    userInput= $("#userSearch").val();
+    localStorage.setItem("userInput",JSON.stringify(userInput))
+    window.location.assign(href="search.html")
+})

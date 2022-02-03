@@ -20,7 +20,7 @@ var chosenPoke=JSON.parse(localStorage.getItem("pokeID"))
 //load in Crypto Rates
 for(var i = 0; i < cryptoTickers.length; i++){
     //console.log(i);
-        fetch('https://rest.coinapi.io/v1/exchangerate/USD/' + cryptoTickers[i] + '?apikey=' + coinAPIKeys[2])
+        fetch('https://rest.coinapi.io/v1/exchangerate/USD/' + cryptoTickers[i] + '?apikey=' + coinAPIKeys[3])
             .then(function(response){
                 return response.json();
             })
@@ -149,3 +149,9 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
 
 
 
+$("#userSearchBtn").on('click',function(event){
+    event.preventDefault();
+    userInput= $("#userSearch").val();
+    localStorage.setItem("userInput",JSON.stringify(userInput))
+    window.location.assign(href="search.html")
+})

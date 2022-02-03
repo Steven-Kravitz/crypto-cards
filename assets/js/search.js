@@ -23,10 +23,9 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=name:${userInput}`,{
         //console.log(data.data[i].tcgplayer.prices)
         var imageURL=data.data[i].images.large
         var pokeID=data.data[i].id
-        $(`<div class="col">
-        <div class="card">
-            <img class="card-img-top cardClick " data-pokeID=${pokeID} src="${imageURL}">
-
+        $(`<div class="container col">
+        <div class="row card mt-5">
+            <img class="card-img-top cardClick" data-pokeID=${pokeID} src="${imageURL}">
         </div>
     </div>`).appendTo("#cardContainer")
     }

@@ -7,7 +7,7 @@ fetch('https://api.pokemontcg.io/v2/types')
             var mainBox = $("#type-main");
             var h5 = data.data[i];
             $(`<div class="col card"><h5>${h5}</h5></div>`).appendTo(mainBox)
-            h5.on("click",)
+            // h5.on("click",)
         };
     });
 

@@ -23,9 +23,22 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
         console.log(data.data[i].images.small)
         //console.log(data.data[i].tcgplayer.prices)
         var cardImage=data.data[i].images.small
-        $(`<div class="container col">
-            <img class="card-img card" data-pokeID=${deckInput} src="${cardImage}">
+        var pokeName=data.data[i].name
+        var pokePrice=data.data[i].tcgplayer
+
+
+    $(
+        `<div class="container col cardInfoContainer">
+            <div class="row">
+            <img class="card-img card" src="${cardImage}">
+            <h2 class="pokeName">${pokeName}</h2>
+            <p class= "pokePrice">${pokePrice}</p>
+            </div>
         </div>
     </div>`).appendTo("#deckBuilder")
-        }})
+
+        // $(`<div class="row">
+        //     <p class="pokeName">${pokeName}</p>  
+        // `).appendTo(".cardInfoContainer")
+    }})
     }}

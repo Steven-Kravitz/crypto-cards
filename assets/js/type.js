@@ -11,8 +11,15 @@ fetch('https://api.pokemontcg.io/v2/types')
         };
     });
 
+// search function.
+$("#userSearchBtn").on('click',function(event){
+    event.preventDefault();
+    userInput= $("#userSearch").val();
+    localStorage.setItem("userInput",JSON.stringify(userInput))
+    window.location.assign(href="search.html")
+})
 
-
+// notes:
 // https://api.pokemontcg.io/v2/cards?q=types:colorless
 
 // userBtn.on('click',function(event){

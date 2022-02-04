@@ -11,3 +11,5 @@
 // ** When you click on tab in nav and go to the page, should be highlighted in the nav to let user know which page they’re on.
 
 // any more comments/to-do u guys have:
+
+// ** error messages/if user types in wrong or mispelled poke name, it alerts user to enter correct pokename.

@@ -41,7 +41,7 @@ $("#userSearchBtn").on('click',function(event){
 })
 
 $("#cardContainer").on('click',".cardClick", function(event){
-    var element =event.target
+    var element = event.target
     console.log(element)
     var pokeID=element.dataset.pokeid;
     localStorage.setItem('pokeID',JSON.stringify(pokeID));

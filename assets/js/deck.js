@@ -32,38 +32,38 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
     $(`<div class="container col" id="card-deck">
             <div class="row cardInfoContainer" id=${pokeID}>
             <img class="card-img card" data-id=${pokeID} src="${cardImage}">
-            <h2 class="pokeName" >${pokeName} <br> ${pokeSetName}</h2>  
+            <h2 class="pokeName" >${pokeName} <br> <span id='setTitle'>${pokeSetName}</h2>  
             </div>          
         </div>
     </div>`).appendTo("#deckBuilder")
     
     if ("normal" in data.data[j].tcgplayer.prices){
         var normalPrices=data.data[j].tcgplayer.prices.normal;
-        $(`<p class="pokePrice">${normalPrices.market} USD</p>`).appendTo(`#${pokeID}`)
+        $(`<div class=""><h5 class="">Normal Market Price: </h5><p class="pokePrice">${normalPrices.market} USD</p></div>`).appendTo(`#${pokeID}`)
         //console.log("normal is in the price list");
        }
        
        if ("holofoil" in data.data[j].tcgplayer.prices){
         var holofoilPrices=data.data[j].tcgplayer.prices.holofoil;
-        $(`<p class="pokePrice">${holofoilPrices.market} USD</p>`).appendTo(`#${pokeID}`)
+        $(`<div class=""><h5 class="">Holofoil Market Price: </h5><p class="pokePrice">${holofoilPrices.market} USD</p></div>`).appendTo(`#${pokeID}`)
        // console.log("holofoil is in the price list");
        }
 
        if ("reverseHolofoil" in data.data[j].tcgplayer.prices){
         var reverseHolofoilPrices=data.data[j].tcgplayer.prices.reverseHolofoil;
-        $(`<p class="pokePrice">${reverseHolofoilPrices.market} USD</p>`).appendTo(`#${pokeID}`)
+        $(`<div class=""><h5 class="">Reverse Holofoil Market Price: </h5><p class="pokePrice">${reverseHolofoilPrices.market} USD</p></div>`).appendTo(`#${pokeID}`)
         //console.log("reverseHolofoil is in the price list");
        }
 
        if ("1stEditionHolofoil" in data.data[j].tcgplayer.prices){
         var firststEditionHolofoil=data.data[j].tcgplayer.prices["1stEditionHolofoil"] ;
-        $(`<p class="pokePrice">${firststEditionHolofoil.market} USD</p>`).appendTo(`#${pokeID}`)
+        $(`<div class=""><h5 class="">1st Edition Holofoil Market Price: </h5><p class="pokePrice">${firststEditionHolofoil.market} USD</p></div>`).appendTo(`#${pokeID}`)
         //console.log("1stEditionHolofoil is in the price list");
        }
 
        if ("1stEditionNormal" in data.data[j].tcgplayer.prices){
         var firstEditionNormal =data.data[j].tcgplayer.prices["1stEditionNormal"];
-        $(`<p class="pokePrice">${firstEditionNormal.market} USD</p>`).appendTo(`#${pokeID}`)
+        $(`<div class=""><h5 class="">1st Edition Normal Price: </h5><p class="pokePrice">${firstEditionNormal.market} USD</p></div>`).appendTo(`#${pokeID}`)
         //console.log("1stEditionNormal is in the price list");
        }
 

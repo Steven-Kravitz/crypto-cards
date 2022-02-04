@@ -34,3 +34,8 @@ h1 {
 .card-img {
     cursor: pointer;
 }
+
+#setTitle {
+    font-size: 66%;
+    text-decoration: underline;
+}

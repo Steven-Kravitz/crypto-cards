@@ -18,3 +18,7 @@ h1 {
     text-align: center;
     padding-top: 40px;
 }
+
+img:hover {
+    transform: scale(1.10);
+}

@@ -21,15 +21,34 @@ var cryptoInfo = {};
 var chosenPoke=JSON.parse(localStorage.getItem("pokeID"))
 //load in Crypto Rates
 for(var i = 0; i < cryptoTickers.length; i++){
-    fetch('https://rest.coinapi.io/v1/exchangerate/USD/' + cryptoTickers[i] + '?apikey=' + coinAPIKeys[2])
+    console.log(getCrypto(coinAPIKeys[0]))
+
+
+}
+
+function getCrypto(coinkey){
+    fetch('https://rest.coinapi.io/v1/exchangerate/USD/' + cryptoTickers[i] + '?apikey=' + coinkey)
         .then(function(response){
             return response.json();
         }).then(function(data){
             cryptoInfo[data.asset_id_quote]=data.rate;
         }).then(function(){})
-
-sleep(500)
+        console.log(cryptoInfo);
+        return true
 }
+
+
+
+// for(var i = 0; i < cryptoTickers.length; i++){
+//     fetch('https://rest.coinapi.io/v1/exchangerate/USD/' + cryptoTickers[i] + '?apikey=' + coinAPIKeys[1])
+//         .then(function(response){
+//             return response.json();
+//         }).then(function(data){
+//             cryptoInfo[data.asset_id_quote]=data.rate;
+//         }).then(function(){})
+
+// sleep(500)
+// }
 
 
 
@@ -50,7 +69,7 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
     })
 // Drilling down to the first entry
     .then(function(data){
-        console.log(data);
+        //console.log(data);
         var imageURL=data.data.images.large;
         var pokeName=data.data.name;
         var pokeSetName=data.data.set.name;

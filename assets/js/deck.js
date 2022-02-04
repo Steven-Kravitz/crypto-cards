@@ -32,8 +32,7 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
     $(`<div class="container col" id="card-deck">
             <div class="row cardInfoContainer">
             <img class="card-img card" data-id=${pokeID} src="${cardImage}">
-            <h2 class="pokeName" >${pokeName}</h2>
-            <h4 class="pokeSetName"> ${pokeSetName}</h4>
+            <h2 class="pokeName" >${pokeName} <br> ${pokeSetName}</h2>  
             </div>          
         </div>
     </div>`).appendTo("#deckBuilder")

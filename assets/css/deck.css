@@ -1,6 +1,7 @@
 .card {
     width: 150px;
     height: 225px;
+    transform: scale(1.10);
 }
 
 /* Centering the "My Deck" header */
@@ -12,20 +13,24 @@ h1 {
 
 /* Adding padding(space in between words and the card */
 #card-deck {
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 .pokeName {
-    padding-left: 120px;
-    padding-top: 20px;
+    padding-left: 10px;
+    padding-top: 5px;
 }
 
 .pokeSetName {
-    padding-left: 120px;
-    padding-top: 25px;
+    padding-left: 10px;
+    padding-top: 5px;
 }
 
 .pokePrice {
-    padding-left: 120px;
-    padding-top: 30px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.card-img {
+    cursor: pointer;
 }

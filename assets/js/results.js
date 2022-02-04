@@ -21,25 +21,17 @@ var cryptoInfo = {};
 var chosenPoke=JSON.parse(localStorage.getItem("pokeID"))
 //load in Crypto Rates
 for(var i = 0; i < cryptoTickers.length; i++){
-    getRates(cryptoTickers[i],coinAPIKeys,cryptoInfo)
-    sleep(500)
+    fetch('https://rest.coinapi.io/v1/exchangerate/USD/' + cryptoTickers[i] + '?apikey=' + coinAPIKeys[1])
+        .then(function(response){
+            return response.json();
+        }).then(function(data){
+            cryptoInfo[data.asset_id_quote]=data.rate;
+        }).then(function(){})
+
+sleep(500)
 }
 
-function getRates(ticker,keyApi,information){
- for(k=0;   !(fetch('https://rest.coinapi.io/v1/exchangerate/USD/' + ticker + '?apikey=' + keyApi[k])
-    .then(function(response){
-        if(response.ok){
-            response.json().then(function(data){
-                information[data.asset_id_quote]=data.rate;
-            }).then(function(){})
-        }
-        else{
-            return false
-        }
-    }));k++){
-        console.log(k);
-    }
-}
+
 
 
 
@@ -58,16 +50,53 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
     })
 // Drilling down to the first entry
     .then(function(data){
-        //console.log(cryptoInfo.BTC);
+        console.log(data);
         var imageURL=data.data.images.large;
         var pokeName=data.data.name;
         var pokeSetName=data.data.set.name;
         var buyURL=data.data.tcgplayer.url;
-
+        var pokeType=data.data.types[0]
        //console.log(imageURL);
        $(`<img src="${imageURL}" alt="">`).appendTo("#column1");
        $(`<span class="title">${pokeName}</span>`).appendTo(".cardName");
+       
        $(`<span class="setName">${pokeSetName}</span>`).appendTo(".cardSetName");
+       switch(pokeType){
+    case 'Lightning':
+        $(`<span><img id="pokeType" src="assets/img/electric.png" alt="electric"></span>`).appendTo(".cardName");
+        break;
+    case 'Colorless':
+        $(`<span><img id="pokeType" src="assets/img/colorless.png" alt="colorless"></span>`).appendTo(".cardName");
+        break;
+    case 'Dark':
+        $(`<span><img id="pokeType" src="assets/img/dark.png" alt="dark"></span>`).appendTo(".cardName");
+        break;
+    case 'Fairy':
+        $(`<span><img id="pokeType" src="assets/img/fairy.png" alt="fairy"></span>`).appendTo(".cardName");
+        break;
+    case 'Fighting':
+        $(`<span><img id="pokeType" src="assets/img/fighting.png" alt="fighting"></span>`).appendTo(".cardName");
+        break;
+    case 'Fire':
+        $(`<span><img id="pokeType" src="assets/img/fire.png" alt="fire"></span>`).appendTo(".cardName");
+        break;
+    case 'Grass':
+        $(`<span><img id="pokeType" src="assets/img/grass.png" alt="grass"></span>`).appendTo(".cardName");
+        break;
+    case 'Metal':
+        $(`<span><img id="pokeType" src="assets/img/metal.png" alt="metal"></span>`).appendTo(".cardName");
+        break;
+    case 'Dragon':
+        $(`<span><img id="pokeType" src="assets/img/dragon.png" alt="dragon"></span>`).appendTo(".cardName");
+        break;
+    case 'Psychic':
+        $(`<span><img id="pokeType" src="assets/img/psychic.png" alt="psychic"></span>`).appendTo(".cardName");
+        break;
+    case 'Water':
+        $(`<span><img id="pokeType" src="assets/img/water.png" alt="water"></span>`).appendTo(".cardName");
+        break;
+        default:
+        }
        $(`<a href="${buyURL}" target="_blank">Buy Now From TCGPlayer</a>`).appendTo(".line1TCG");
 
        if ("normal" in data.data.tcgplayer.prices){
@@ -82,7 +111,7 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
         }
         $(`<div class="col"><div class=""><h5 class="">normal Market Price in BTC</h5><p class="">${(normalPriceInCrypto.BTC).toFixed(5)} BTC</p></div></div>`).appendTo(".normal")
         $(`<div class="col"><div class=""><h5 class="">normal Market Price in ETH</h5><p class="">${(normalPriceInCrypto.ETH).toFixed(5)} ETH</p></div></div>`).appendTo(".normal")
-        $(`<div class="col"><div class=""><h5 class="">normal Market Price in USDT</h5><p class="">${(normalPriceInCrypto.USDT).toFixed(5)} USDT</p></div></div>`).appendTo(".normal")
+        $(`<div class="col"><div class=""><h5 class="">normal Market Price in Tether</h5><p class="">${(normalPriceInCrypto.USDT).toFixed(5)} USDT</p></div></div>`).appendTo(".normal")
         //console.log("normal is in the price list");
        }
        
@@ -98,7 +127,7 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
         }
         $(`<div class="col"><div class=""><h5 class="">holofoil Market Price in BTC</h5><p class="">${(holofoilPriceInCrypto.BTC).toFixed(5)} BTC</p></div></div>`).appendTo(".holofoil")
         $(`<div class="col"><div class=""><h5 class="">holofoil Market Price in ETH</h5><p class="">${(holofoilPriceInCrypto.ETH).toFixed(5)} ETH</p></div></div>`).appendTo(".holofoil")
-        $(`<div class="col"><div class=""><h5 class="">holofoil Market Price in USDT</h5><p class="">${(holofoilPriceInCrypto.USDT).toFixed(5)} USDT</p></div></div>`).appendTo(".holofoil")
+        $(`<div class="col"><div class=""><h5 class="">holofoil Market Price in Tether</h5><p class="">${(holofoilPriceInCrypto.USDT).toFixed(5)} USDT</p></div></div>`).appendTo(".holofoil")
        // console.log("holofoil is in the price list");
        }
 
@@ -114,7 +143,7 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
         }
         $(`<div class="col"><div class=""><h5 class="">reverseHolofoil Market Price in BTC</h5><p class="">${(reverseHolofoilPriceInCrypto.BTC).toFixed(5)} BTC</p></div></div>`).appendTo(".reverseHolofoil")
         $(`<div class="col"><div class=""><h5 class="">reverseHolofoil Market Price in ETH</h5><p class="">${(reverseHolofoilPriceInCrypto.ETH).toFixed(5)} ETH</p></div></div>`).appendTo(".reverseHolofoil")
-        $(`<div class="col"><div class=""><h5 class="">reverseHolofoil Market Price in USDT</h5><p class="">${(reverseHolofoilPriceInCrypto.USDT).toFixed(5)} USDT</p></div></div>`).appendTo(".reverseHolofoil")
+        $(`<div class="col"><div class=""><h5 class="">reverseHolofoil Market Price in Tether</h5><p class="">${(reverseHolofoilPriceInCrypto.USDT).toFixed(5)} USDT</p></div></div>`).appendTo(".reverseHolofoil")
 
         //console.log("reverseHolofoil is in the price list");
        }
@@ -131,7 +160,7 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
         }
         $(`<div class="col"><div class=""><h5 class="">1stEditionHolofoil Market Price in BTC</h5><p class="">${(firststEditionHolofoilHolofoilPriceInCrypto.BTC).toFixed(5)} BTC</p></div></div>`).appendTo(".1stEditionHolofoil")
         $(`<div class="col"><div class=""><h5 class="">1stEditionHolofoil Market Price in ETH</h5><p class="">${(firststEditionHolofoilHolofoilPriceInCrypto.ETH).toFixed(5)} ETH</p></div></div>`).appendTo(".1stEditionHolofoil")
-        $(`<div class="col"><div class=""><h5 class="">1stEditionHolofoil Market Price in USDT</h5><p class="">${(firststEditionHolofoilHolofoilPriceInCrypto.USDT).toFixed(5)} USDT</p></div></div>`).appendTo(".1stEditionHolofoil")
+        $(`<div class="col"><div class=""><h5 class="">1stEditionHolofoil Market Price in Tether</h5><p class="">${(firststEditionHolofoilHolofoilPriceInCrypto.USDT).toFixed(5)} USDT</p></div></div>`).appendTo(".1stEditionHolofoil")
 
         //console.log("1stEditionHolofoil is in the price list");
        }
@@ -148,9 +177,25 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
         }
         $(`<div class="col"><div class=""><h5 class="">1stEditionNormal Market Price in BTC</h5><p class="">${(firstEditionNormalPriceInCrypto.BTC).toFixed(5)} BTC</p></div></div>`).appendTo(".1stEditionNormal")
         $(`<div class="col"><div class=""><h5 class="">1stEditionNormal Market Price in ETH</h5><p class="">${(firstEditionNormalPriceInCrypto.ETH).toFixed(5)} ETH</p></div></div>`).appendTo(".1stEditionNormal")
-        $(`<div class="col"><div class=""><h5 class="">1stEditionNormal Market Price in USDT</h5><p class="">${(firstEditionNormalPriceInCrypto.USDT).toFixed(5)} USDT</p></div></div>`).appendTo(".1stEditionNormal")
+        $(`<div class="col"><div class=""><h5 class="">1stEditionNormal Market Price in Tether</h5><p class="">${(firstEditionNormalPriceInCrypto.USDT).toFixed(5)} USDT</p></div></div>`).appendTo(".1stEditionNormal")
         //console.log("1stEditionNormal is in the price list");
        }
+       if ("unlimitedHolofoil" in data.data.tcgplayer.prices){
+        var unlimitedHolofoil =data.data.tcgplayer.prices["unlimitedHolofoil"];
+        $(`<div class="col market"><div class="card-details"><h5 class="heading">unlimitedHolofoil market</h5><p class="">${unlimitedHolofoil.market} USD</p></div></div>`).appendTo(".unlimitedHolofoil")
+        unlimitedHolofoilPriceInCrypto={}
+        
+        for(i=0;i<cryptoTickers.length;i++){
+            var dummy=Object.keys(cryptoInfo)[i]
+            console.log(cryptoInfo[dummy]);
+            unlimitedHolofoilPriceInCrypto[dummy]=(unlimitedHolofoil.market)*(cryptoInfo[dummy]);
+        }
+        $(`<div class="col"><div class=""><h5 class="">unlimitedHolofoil Market Price in BTC</h5><p class="">${(unlimitedHolofoilPriceInCrypto.BTC).toFixed(5)} BTC</p></div></div>`).appendTo(".unlimitedHolofoil")
+        $(`<div class="col"><div class=""><h5 class="">unlimitedHolofoil Market Price in ETH</h5><p class="">${(unlimitedHolofoilPriceInCrypto.ETH).toFixed(5)} ETH</p></div></div>`).appendTo(".unlimitedHolofoil")
+        $(`<div class="col"><div class=""><h5 class="">unlimitedHolofoil Market Price in Tether</h5><p class="">${(unlimitedHolofoilPriceInCrypto.USDT).toFixed(5)} USDT</p></div></div>`).appendTo(".unlimitedHolofoil")
+        //console.log("unlimitedHolofoil is in the price list");
+       }
+    
     });
 
 

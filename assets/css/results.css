@@ -1,3 +1,7 @@
 .deckBtn{
     height: min-content;
 }
+#pokeType{
+    height:25px;
+    width: 25px;
+}

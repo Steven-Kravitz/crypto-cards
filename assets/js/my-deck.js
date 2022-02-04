@@ -33,12 +33,14 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
         var pokeName=data.data[j].name
         var pokeID=data.data[j].id
         var pokeSetName=data.data[j].set.name;
+        var setId = data.data[j].set.id
+        console.log(setId)
         
 
     $(`<div class="container col" id="card-deck">
             <div class="row cardInfoContainer" id=${pokeID}>
             <img class="card-img card" data-id=${pokeID} src="${cardImage}">
-            <h2 class="pokeName" >${pokeName} <br> <span id='setTitle'>${pokeSetName}</h2>  
+            <h2 class="pokeName" >${pokeName} <br> <span data-setid="${setId}"id='setTitle'>${pokeSetName}</h2>  
             </div>          
         </div>
     </div>`).appendTo("#deckBuilder")
@@ -76,6 +78,15 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
         // $(`<div class="row">
         //     <p class="pokeName">${pokeName}</p>  
         // `).appendTo(".cardInfoContainer")
+        $('#setTitle').on('click',function(event){
+            var el = event.target
+                console.log(el)
+                var setId = el.dataset.setid
+                localStorage.setItem('setId',JSON.stringify(setId));
+                console.log(setId);
+                
+                window.location.assign(href="set-results.html")
+        });
     }})
 
     }}

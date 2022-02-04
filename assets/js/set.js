@@ -24,7 +24,7 @@ fetch('https://api.pokemontcg.io/v2/sets')
             localStorage.setItem('setId',JSON.stringify(setId));
             console.log(setId);
         
-            window.location.assign(href="setresults.html")
+            window.location.assign(href="set-results.html")
         })
     }
 })

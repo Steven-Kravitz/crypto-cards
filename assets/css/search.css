@@ -1,12 +1,12 @@
 .card{
     width: 250px;
     height: 350px;
+    cursor: pointer;
+    /* border-radius: 10px; */
+    border: none;
 }
 .m-n1{
     margin: 20px 20px 20px 20px;
-}
-.card {
-    cursor:pointer
 }
 
 #change {
@@ -17,7 +17,7 @@
 
 img:hover {
     transform: scale(1.10);
-    box-shadow: 0 0 5px #fff, 0 0 17px #f0f, 0 0 30px #0ff;
+    box-shadow: 0 0 5px #fff, 0 0 19px #f0f, 0 0 40px #0ff;
     /* inset 0px 0px 8px rgb(198, 170, 204), 0 0 15px rgb(198, 170, 204); */
     /* 0 0 60px 30px #fff,  inner white
     0 0 100px 60px #f0f, middle magenta

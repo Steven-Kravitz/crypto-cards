@@ -55,48 +55,12 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
         var pokeName=data.data.name;
         var pokeSetName=data.data.set.name;
 
-        var pokeType=data.data.types[0]
+
        //console.log(imageURL);
        $(`<img src="${imageURL}" alt="">`).appendTo("#column1");
        $(`<span class="title">${pokeName}</span>`).appendTo(".cardName");
        
        $(`<span class="setName">${pokeSetName}</span>`).appendTo(".cardSetName");
-       switch(pokeType){
-    case 'Lightning':
-        $(`<span><img id="pokeType" src="assets/img/electric.png" alt="electric"></span>`).appendTo(".cardName");
-        break;
-    case 'Colorless':
-        $(`<span><img id="pokeType" src="assets/img/colorless.png" alt="colorless"></span>`).appendTo(".cardName");
-        break;
-    case 'Dark':
-        $(`<span><img id="pokeType" src="assets/img/dark.png" alt="dark"></span>`).appendTo(".cardName");
-        break;
-    case 'Fairy':
-        $(`<span><img id="pokeType" src="assets/img/fairy.png" alt="fairy"></span>`).appendTo(".cardName");
-        break;
-    case 'Fighting':
-        $(`<span><img id="pokeType" src="assets/img/fighting.png" alt="fighting"></span>`).appendTo(".cardName");
-        break;
-    case 'Fire':
-        $(`<span><img id="pokeType" src="assets/img/fire.png" alt="fire"></span>`).appendTo(".cardName");
-        break;
-    case 'Grass':
-        $(`<span><img id="pokeType" src="assets/img/grass.png" alt="grass"></span>`).appendTo(".cardName");
-        break;
-    case 'Metal':
-        $(`<span><img id="pokeType" src="assets/img/metal.png" alt="metal"></span>`).appendTo(".cardName");
-        break;
-    case 'Dragon':
-        $(`<span><img id="pokeType" src="assets/img/dragon.png" alt="dragon"></span>`).appendTo(".cardName");
-        break;
-    case 'Psychic':
-        $(`<span><img id="pokeType" src="assets/img/psychic.png" alt="psychic"></span>`).appendTo(".cardName");
-        break;
-    case 'Water':
-        $(`<span><img id="pokeType" src="assets/img/water.png" alt="water"></span>`).appendTo(".cardName");
-        break;
-        default:
-        }
 
        if ("normal" in data.data.tcgplayer.prices){
         var normalPrices=data.data.tcgplayer.prices.normal;
@@ -194,7 +158,44 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
         $(`<div class="col"><div class=""><h5 class="">unlimitedHolofoil Market Price in Tether</h5><p class="">${(unlimitedHolofoilPriceInCrypto.USDT).toFixed(5)} USDT</p></div></div>`).appendTo(".unlimitedHolofoil")
         //console.log("unlimitedHolofoil is in the price list");
        }
-       
+       var pokeType=data.data.types[0]
+       switch(pokeType){
+        case 'Lightning':
+            $(`<span><img id="pokeType" src="assets/img/electric.png" alt="electric"></span>`).appendTo(".cardName");
+            break;
+        case 'Colorless':
+            $(`<span><img id="pokeType" src="assets/img/colorless.png" alt="colorless"></span>`).appendTo(".cardName");
+            break;
+        case 'Dark':
+            $(`<span><img id="pokeType" src="assets/img/dark.png" alt="dark"></span>`).appendTo(".cardName");
+            break;
+        case 'Fairy':
+            $(`<span><img id="pokeType" src="assets/img/fairy.png" alt="fairy"></span>`).appendTo(".cardName");
+            break;
+        case 'Fighting':
+            $(`<span><img id="pokeType" src="assets/img/fighting.png" alt="fighting"></span>`).appendTo(".cardName");
+            break;
+        case 'Fire':
+            $(`<span><img id="pokeType" src="assets/img/fire.png" alt="fire"></span>`).appendTo(".cardName");
+            break;
+        case 'Grass':
+            $(`<span><img id="pokeType" src="assets/img/grass.png" alt="grass"></span>`).appendTo(".cardName");
+            break;
+        case 'Metal':
+            $(`<span><img id="pokeType" src="assets/img/metal.png" alt="metal"></span>`).appendTo(".cardName");
+            break;
+        case 'Dragon':
+            $(`<span><img id="pokeType" src="assets/img/dragon.png" alt="dragon"></span>`).appendTo(".cardName");
+            break;
+        case 'Psychic':
+            $(`<span><img id="pokeType" src="assets/img/psychic.png" alt="psychic"></span>`).appendTo(".cardName");
+            break;
+        case 'Water':
+            $(`<span><img id="pokeType" src="assets/img/water.png" alt="water"></span>`).appendTo(".cardName");
+            break;
+            default:
+            }
+    
        var buyURL=data.data.tcgplayer.url;
        $(`<a href="${buyURL}" target="_blank">Buy Now From TCGPlayer</a>`).appendTo(".line1TCG");
     });

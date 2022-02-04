@@ -18,7 +18,7 @@ function getSet(chosenSetId){
         console.log(data.data)
         
             var setName=data.data[0].set.name
-            $(`<h1 class="set-name">${setName}</h1>`).appendTo(".set-name")
+            $(`<h1 class="set-name">Set: ${setName}</h1>`).appendTo(".set-name")
 
 
         for (i = 0; i < data.data.length; i++){

@@ -20,34 +20,17 @@ var cryptoTickers = ['BTC', 'ETH', 'USDT'];
 var cryptoInfo = {};
 var chosenPoke=JSON.parse(localStorage.getItem("pokeID"))
 //load in Crypto Rates
+
 for(var i = 0; i < cryptoTickers.length; i++){
-    console.log(getCrypto(coinAPIKeys[0]))
-
-
-}
-
-function getCrypto(coinkey){
-    fetch('https://rest.coinapi.io/v1/exchangerate/USD/' + cryptoTickers[i] + '?apikey=' + coinkey)
+    fetch('https://rest.coinapi.io/v1/exchangerate/USD/' + cryptoTickers[i] + '?apikey=' + coinAPIKeys[1])
         .then(function(response){
             return response.json();
         }).then(function(data){
             cryptoInfo[data.asset_id_quote]=data.rate;
         }).then(function(){})
-        return true
+
+sleep(500)
 }
-
-
-
-// for(var i = 0; i < cryptoTickers.length; i++){
-//     fetch('https://rest.coinapi.io/v1/exchangerate/USD/' + cryptoTickers[i] + '?apikey=' + coinAPIKeys[1])
-//         .then(function(response){
-//             return response.json();
-//         }).then(function(data){
-//             cryptoInfo[data.asset_id_quote]=data.rate;
-//         }).then(function(){})
-
-// sleep(500)
-// }
 
 
 

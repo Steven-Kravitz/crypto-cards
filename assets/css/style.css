@@ -1,0 +1,13 @@
+/* Changed the sizing of the logos in the header */
+.fab {
+    font-size: 30px;
+}
+
+.fas {
+    font-size: 30px;
+}
+
+/* Moved the search bar down */
+.form-inline {
+    padding-top: 10%;
+}

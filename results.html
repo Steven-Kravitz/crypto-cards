@@ -18,7 +18,9 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
     <link rel="stylesheet" href="assets/css/results.css"/>
 </head>
-<body>
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader"></div>
+  <div id="myDiv">
     <header>
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -91,7 +93,20 @@
             </div>
         </div>
     </div>
-
+  </div>
+  <script>
+    var myVar;
+    
+    function myFunction() {
+      myVar = setTimeout(showPage, 2000);
+      console.log(window.performance.timing.domContentLoadedEventEnd- window.performance.timing.navigationStart-1000)
+    }
+    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+    </script>
 </body>
   <!-- jquery link -->
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

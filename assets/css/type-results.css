@@ -3,3 +3,9 @@
     height: 350px;
     cursor: pointer;
 }
+
+#change {
+    max-width:280px;
+    height:400px;
+    margin: 0
+}

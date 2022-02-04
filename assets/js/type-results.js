@@ -24,8 +24,10 @@ function getCards(pokeType){
     // Drilling down to the first entry
         .then(function(data){
             console.log(data);
-            // var typeName = data.data[0].set.name
-            // $(`<h1 class="set-name">Set: ${setName}</h1>`).appendTo(".set-name")
+            var typeName = data.data[0].types
+            console.log(typeName)
+            $(`<h1 class="type-name">Type: ${typeName}</h1>`).appendTo(".type-name")
+
             for (i = 0; i < data.data.length; i++){
             console.log(data.data[i]);
             console.log(data.data[i].name)

@@ -1,4 +1,26 @@
 /* Changed the sizing of the logos in the header */
+:root {
+    --darkColor: rgb(77, 75, 75);
+}
+
+header {
+    background-color: var(--darkColor)
+    /* background-image: url(https://i.imgur.com/XVQ3rTs.png); */
+}
+
+.body-area {
+    /* background-color: var(--darkColor); */
+    /* background-image: url(https://i.imgur.com/XVQ3rTs.png); */
+}
+
+html {
+    /* background-color: var(--darkColor); */
+    /* background-image: url(https://i.imgur.com/XVQ3rTs.png); */
+}
+
+body{
+    background-image: url(https://i.imgur.com/XVQ3rTs.png);}
+
 .fab {
     font-size: 30px;
 }
@@ -14,4 +36,24 @@
 
 body{
     font-family: 'Archivo', sans-serif;
+}
+
+.jumbotron {
+    /* background-image: url(https://i.imgur.com/dzdZUhT.png); */
+    background-color: var(--darkColor);
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 5px 0px;
+
+}
+
+.display-4 {
+    font-weight: bold;
+    color: black;
+}
+
+.lead {
+    font-weight: bolder;
+    color: black;
+    font-size: 110%;
+    padding-left: 3%;
 }

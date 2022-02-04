@@ -54,6 +54,10 @@ h5 {
     text-decoration: underline;
 }
 
+#setTitle {
+    cursor: pointer;
+}
+
 /* To make the words and not sit under the card - might use media query */
 /* @media (max-width: 990px) {
     .pokeName {

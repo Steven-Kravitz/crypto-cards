@@ -1,5 +1,11 @@
 var deckInput= JSON.parse(localStorage.getItem("deckInput"))
 console.log(deckInput);
+$("#userSearchBtn").on('click',function(event){
+    event.preventDefault();
+    userInput= $("#userSearch").val();
+    localStorage.setItem("userInput",JSON.stringify(userInput));
+    window.location.assign(href="search.html");
+});
 
 getCards(deckInput);
 function getCards(deckInput){
@@ -82,18 +88,12 @@ $('.container').on('click','.card-img',function(event){
 });
 
 
-
-
-$("#userSearchBtn").on('click',function(event){
-    event.preventDefault();
-    userInput= $("#userSearch").val();
-    localStorage.setItem("userInput",JSON.stringify(userInput));
-    window.location.assign(href="search.html");
-});
-
 $('.clearBtn').on('click', function(event){
     event.preventDefault();
     localStorage.removeItem("deckInput");
     location.reload();
 }
 )
+
+
+

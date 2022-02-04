@@ -33,7 +33,6 @@ function getCrypto(coinkey){
         }).then(function(data){
             cryptoInfo[data.asset_id_quote]=data.rate;
         }).then(function(){})
-        console.log(cryptoInfo);
         return true
 }
 
@@ -241,5 +240,5 @@ $(".deckBtn").on('click', function(event){
     }
     localStorage.setItem("deckInput", JSON.stringify(deckInput))
     console.log(deckInput)
-    window.location.assign(href="my-deck.html")
+    window.location.assign(href="deck.html")
 })

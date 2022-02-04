@@ -6,9 +6,14 @@ fetch('https://api.pokemontcg.io/v2/types')
         for(var i = 0; i < data.data.length; i++){
             var mainBox = $("#type-main");
             var h5 = data.data[i];
-            $(`<div class="col card"><h5>${h5}</h5></div>`).appendTo(mainBox)
-            // h5.on("click",)
-        };
+            $(`<div class="card"><h5 class="type-name" data-type=${h5}>${h5}</h5></div>`).appendTo(mainBox)
+            }
+        $(".type-name").on("click", function(event){
+            var el = event.target
+            var pokeType = el.dataset.type;
+            localStorage.setItem('pokeType', JSON.stringify(pokeType));
+            window.location.assign(href="type-results.html");
+        })
     });
 
 // search function.

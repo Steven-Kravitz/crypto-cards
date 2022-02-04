@@ -5,15 +5,21 @@
 
 header {
     background-color: var(--darkColor)
+    /* background-image: url(https://i.imgur.com/XVQ3rTs.png); */
 }
 
 .body-area {
-    background-color: var(--darkColor);
+    /* background-color: var(--darkColor); */
+    /* background-image: url(https://i.imgur.com/XVQ3rTs.png); */
 }
 
 html {
-    background-color: var(--darkColor);
+    /* background-color: var(--darkColor); */
+    /* background-image: url(https://i.imgur.com/XVQ3rTs.png); */
 }
+
+body{
+    background-image: url(https://i.imgur.com/XVQ3rTs.png);}
 
 .fab {
     font-size: 30px;
@@ -33,7 +39,11 @@ body{
 }
 
 .jumbotron {
-    background-image: url(https://images.unsplash.com/photo-1628968434441-d9c1c66dcde7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+    /* background-image: url(https://i.imgur.com/dzdZUhT.png); */
+    background-color: var(--darkColor);
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 5px 0px;
+
 }
 
 .display-4 {

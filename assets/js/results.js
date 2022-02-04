@@ -155,3 +155,13 @@ $("#userSearchBtn").on('click',function(event){
     localStorage.setItem("userInput",JSON.stringify(userInput))
     window.location.assign(href="search.html")
 })
+
+$(".deckBtn").on('click', function(event){
+    event.preventDefault();
+    var deckInput= [localStorage.getItem("deckInput")]
+    // var deckInputExist
+// Create a string in the array on button press, if the local storage is empty start a new storage array, if there are existing values add to the current array
+    deckInput.push(chosenPoke)
+    localStorage.setItem("deckInput", JSON.stringify(deckInput))
+    console.log(deckInput)
+})

@@ -1,5 +1,5 @@
-var deckInput= ["xy1-1", "xyp-XY171", "ex10-1", "base6-5"]
-// JSON.parse(localStorage.getItem("deckCard"))
+var deckInput= [JSON.parse(localStorage.getItem("deckInput"))]
+
 // getCards(deckInput);
 getCards(deckInput)
 function getCards(deckInput){
@@ -72,3 +72,10 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
         // `).appendTo(".cardInfoContainer")
     }})
     }}
+
+    $("#userSearchBtn").on('click',function(event){
+        event.preventDefault();
+        userInput= $("#userSearch").val();
+        localStorage.setItem("userInput",JSON.stringify(userInput))
+        window.location.assign(href="search.html")
+    })

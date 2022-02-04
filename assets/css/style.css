@@ -1,4 +1,20 @@
 /* Changed the sizing of the logos in the header */
+:root {
+    --darkColor: rgb(77, 75, 75);
+}
+
+header {
+    background-color: var(--darkColor)
+}
+
+.body-area {
+    background-color: var(--darkColor);
+}
+
+html {
+    background-color: var(--darkColor);
+}
+
 .fab {
     font-size: 30px;
 }
@@ -14,4 +30,20 @@
 
 body{
     font-family: 'Archivo', sans-serif;
+}
+
+.jumbotron {
+    background-image: url(https://images.unsplash.com/photo-1628968434441-d9c1c66dcde7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+}
+
+.display-4 {
+    font-weight: bold;
+    color: black;
+}
+
+.lead {
+    font-weight: bolder;
+    color: black;
+    font-size: 110%;
+    padding-left: 3%;
 }

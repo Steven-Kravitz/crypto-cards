@@ -13,22 +13,35 @@ h1 {
 
 /* Adding padding(space in between words and the card */
 #card-deck {
-    padding-top: 10px;
+    padding-top: 50px;
 }
 
 .pokeName {
-    padding-left: 10px;
-    padding-top: 5px;
+    padding-left: 70px;
+    padding-top: 15px;
+    
 }
 
 .pokeSetName {
-    padding-left: 10px;
-    padding-top: 5px;
+    padding-left: 70px;
+    padding-top: 15px;
 }
 
 .pokePrice {
-    padding-left: 10px;
-    padding-top: 5px;
+    padding-left: 70px;
+    padding-top: 15px;
+}
+
+h5 {
+    padding-left: 70px;
+    padding-top: 15px;
+}
+
+
+#clear-button {
+    text-align: center;
+    margin-top: 80px;
+    
 }
 
 .card-img {
@@ -39,3 +52,36 @@ h1 {
     font-size: 66%;
     text-decoration: underline;
 }
+
+/* To make the words and not sit under the card - might use media query */
+/* @media (max-width: 990px) {
+    .pokeName {
+        padding-left: 10px;
+        padding-top: 5px;
+        
+    }
+    
+    .pokeSetName {
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+    
+    .pokePrice {
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+    
+    h5 {
+        padding-left: 10px;
+    }
+  }
+
+  @media (max-width: 770px) {
+    .pokePrice {
+        display: none;
+    }
+    
+    h5 {
+        display: none;s
+    }
+  } */

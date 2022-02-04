@@ -1,10 +1,11 @@
-var deckInput= [JSON.parse(localStorage.getItem("deckInput"))]
+var deckInput= JSON.parse(localStorage.getItem("deckInput"))
+console.log(deckInput);
 
-// getCards(deckInput);
-getCards(deckInput)
+getCards(deckInput);
 function getCards(deckInput){
     for(i=0; i < deckInput.length; i++){
 // Getting the first 250 cards
+console.log(deckInput[i]);
 fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
     headers:{
         "Content-Type":"application/json",
@@ -71,6 +72,7 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
         //     <p class="pokeName">${pokeName}</p>  
         // `).appendTo(".cardInfoContainer")
     }})
+
     }}
 
     $("#userSearchBtn").on('click',function(event){

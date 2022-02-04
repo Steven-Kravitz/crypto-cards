@@ -11,6 +11,8 @@ var priscillasApi = "612EED13-BBA7-4E82-AF79-78955F897E68" // :)
 var stevensAPI = "865395AE-4F4E-48D5-A825-65822194FDE7" // :D
 var jenAPI = "2FEC7249-7A76-4CEB-AB8B-EEEB43C6F19E" // ^-^
 var chrisAPI = "EE0B3E38-CFD9-4BEE-8F5D-BF82AE6DD7BF" // O.O
+var API4 = "0170C7D3-5CE3-439D-9CD6-03FCCAB690D8" // >_>
+var API5 = "560272A5-C7A4-4E7F-A828-1CFF45654C33" //o_O
 var coinAPIKeys = [priscillasApi, stevensAPI, jenAPI, chrisAPI]
 // Add more cryptos for later
 //                    1        2       3
@@ -71,7 +73,7 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
         
         for(i=0;i<cryptoTickers.length;i++){
             var dummy=Object.keys(cryptoInfo)[i]
-            console.log(cryptoInfo[dummy]);
+            //console.log(cryptoInfo[dummy]);
             normalPriceInCrypto[dummy]=(normalPrices.market)*(cryptoInfo[dummy]);
         }
         $(`<div class="col"><div class=""><h5 class="">normal Market Price in BTC</h5><p class="">${(normalPriceInCrypto.BTC).toFixed(5)} BTC</p></div></div>`).appendTo(".normal")
@@ -87,7 +89,7 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
         
         for(i=0;i<cryptoTickers.length;i++){
             var dummy=Object.keys(cryptoInfo)[i]
-            console.log(cryptoInfo[dummy]);
+            //console.log(cryptoInfo[dummy]);
             holofoilPriceInCrypto[dummy]=(holofoilPrices.market)*(cryptoInfo[dummy]);
         }
         $(`<div class="col"><div class=""><h5 class="">holofoil Market Price in BTC</h5><p class="">${(holofoilPriceInCrypto.BTC).toFixed(5)} BTC</p></div></div>`).appendTo(".holofoil")
@@ -103,7 +105,7 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
         
         for(i=0;i<cryptoTickers.length;i++){
             var dummy=Object.keys(cryptoInfo)[i]
-            console.log(cryptoInfo[dummy]);
+            //console.log(cryptoInfo[dummy]);
             reverseHolofoilPriceInCrypto[dummy]=(reverseHolofoilPrices.market)*(cryptoInfo[dummy]);
         }
         $(`<div class="col"><div class=""><h5 class="">reverseHolofoil Market Price in BTC</h5><p class="">${(reverseHolofoilPriceInCrypto.BTC).toFixed(5)} BTC</p></div></div>`).appendTo(".reverseHolofoil")
@@ -120,7 +122,7 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
         
         for(i=0;i<cryptoTickers.length;i++){
             var dummy=Object.keys(cryptoInfo)[i]
-            console.log(cryptoInfo[dummy]);
+            //console.log(cryptoInfo[dummy]);
             firststEditionHolofoilHolofoilPriceInCrypto[dummy]=(firststEditionHolofoil.market)*(cryptoInfo[dummy]);
         }
         $(`<div class="col"><div class=""><h5 class="">1stEditionHolofoil Market Price in BTC</h5><p class="">${(firststEditionHolofoilHolofoilPriceInCrypto.BTC).toFixed(5)} BTC</p></div></div>`).appendTo(".1stEditionHolofoil")
@@ -158,10 +160,16 @@ $("#userSearchBtn").on('click',function(event){
 
 $(".deckBtn").on('click', function(event){
     event.preventDefault();
-    var deckInput= [localStorage.getItem("deckInput")]
+    var deckInput= JSON.parse(localStorage.getItem("deckInput")) || []
     // var deckInputExist
 // Create a string in the array on button press, if the local storage is empty start a new storage array, if there are existing values add to the current array
-    deckInput.push(chosenPoke)
+    if(deckInput.includes(chosenPoke)){
+
+    }
+    else{
+        deckInput.push(chosenPoke);
+    }
     localStorage.setItem("deckInput", JSON.stringify(deckInput))
     console.log(deckInput)
+    window.location.assign(href="deck.html")
 })

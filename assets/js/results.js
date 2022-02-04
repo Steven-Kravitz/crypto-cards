@@ -13,7 +13,7 @@ var jenAPI = "2FEC7249-7A76-4CEB-AB8B-EEEB43C6F19E" // ^-^
 var chrisAPI = "EE0B3E38-CFD9-4BEE-8F5D-BF82AE6DD7BF" // O.O
 var API4 = "0170C7D3-5CE3-439D-9CD6-03FCCAB690D8" // >_>
 var API5 = "560272A5-C7A4-4E7F-A828-1CFF45654C33" //o_O
-var coinAPIKeys = [priscillasApi, stevensAPI, jenAPI, chrisAPI]
+var coinAPIKeys = [priscillasApi, stevensAPI, jenAPI, chrisAPI,API4,API5]
 // Add more cryptos for later
 //                    1        2       3
 var cryptoTickers = ['BTC', 'ETH', 'USDT'];
@@ -21,23 +21,15 @@ var cryptoInfo = {};
 var chosenPoke=JSON.parse(localStorage.getItem("pokeID"))
 //load in Crypto Rates
 for(var i = 0; i < cryptoTickers.length; i++){
-    //console.log(i);
-        fetch('https://rest.coinapi.io/v1/exchangerate/USD/' + cryptoTickers[i] + '?apikey=' + coinAPIKeys[3])
+        fetch('https://rest.coinapi.io/v1/exchangerate/USD/' + cryptoTickers[i] + '?apikey=' + coinAPIKeys[4])
             .then(function(response){
                 return response.json();
-            })
-            .then(function(data){
-                //console.log(data);
-                //console.log(data.rate);
-                //console.log(data.asset_id_quote);
+            }).then(function(data){
                 cryptoInfo[data.asset_id_quote]=data.rate;
-            })
-            .then(function(){
-                //console.log(cryptoInfo);
-               // console.log(cryptoInfo["USDT"]);
-            })
-        sleep(500)
-    }
+            }).then(function(){})
+    
+    sleep(500)
+}
 
 
 

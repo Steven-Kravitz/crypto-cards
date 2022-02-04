@@ -36,7 +36,9 @@ Through this app, you can look up a Pokémon card and see how much of a certain 
 
 ## Wireframe
 
+![wireframe-1](/assets/img/wireframe1.jpg)
 
+![wireframe-2](/assets/img/wireframe2.jpg)
 
 <br/>
 

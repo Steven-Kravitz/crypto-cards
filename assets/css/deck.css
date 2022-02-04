@@ -2,3 +2,30 @@
     width: 150px;
     height: 225px;
 }
+
+/* Centering the "My Deck" header */
+h1 {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* Adding padding(space in between words and the card */
+#card-deck {
+    padding-top: 30px;
+}
+
+.pokeName {
+    padding-left: 120px;
+    padding-top: 20px;
+}
+
+.pokeSetName {
+    padding-left: 120px;
+    padding-top: 25px;
+}
+
+.pokePrice {
+    padding-left: 120px;
+    padding-top: 30px;
+}

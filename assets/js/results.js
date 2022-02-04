@@ -54,7 +54,7 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
         var imageURL=data.data.images.large;
         var pokeName=data.data.name;
         var pokeSetName=data.data.set.name;
-        var buyURL=data.data.tcgplayer.url;
+
         var pokeType=data.data.types[0]
        //console.log(imageURL);
        $(`<img src="${imageURL}" alt="">`).appendTo("#column1");
@@ -97,7 +97,6 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
         break;
         default:
         }
-       $(`<a href="${buyURL}" target="_blank">Buy Now From TCGPlayer</a>`).appendTo(".line1TCG");
 
        if ("normal" in data.data.tcgplayer.prices){
         var normalPrices=data.data.tcgplayer.prices.normal;
@@ -195,7 +194,9 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
         $(`<div class="col"><div class=""><h5 class="">unlimitedHolofoil Market Price in Tether</h5><p class="">${(unlimitedHolofoilPriceInCrypto.USDT).toFixed(5)} USDT</p></div></div>`).appendTo(".unlimitedHolofoil")
         //console.log("unlimitedHolofoil is in the price list");
        }
-    
+       
+       var buyURL=data.data.tcgplayer.url;
+       $(`<a href="${buyURL}" target="_blank">Buy Now From TCGPlayer</a>`).appendTo(".line1TCG");
     });
 
 

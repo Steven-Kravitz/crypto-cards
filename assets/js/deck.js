@@ -25,15 +25,14 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
         // console.log(data.data[j].tcgplayer.prices)
         var cardImage=data.data[j].images.small
         var pokeName=data.data[j].name
-
+        var pokeID=data.data[j].id
 
 
     
-    $(
-        `<div class="container col ">
+    $(`<div class="container col ">
             <div class="row cardInfoContainer">
-            <img class="card-img card" src="${cardImage}">
-            <h2 class="pokeName">${pokeName}</h2>
+            <img class="card-img card" data-id=${pokeID} src="${cardImage}">
+            <h2 class="pokeName" >${pokeName}</h2>
             </div>
         </div>
     </div>`).appendTo("#deckBuilder")
@@ -75,9 +74,19 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
 
     }}
 
-    $("#userSearchBtn").on('click',function(event){
-        event.preventDefault();
-        userInput= $("#userSearch").val();
-        localStorage.setItem("userInput",JSON.stringify(userInput))
-        window.location.assign(href="search.html")
-    })
+$('.container').on('click','.card-img',function(event){
+    console.log(event.target.dataset.id);
+    var pokeID=event.target.dataset.id;
+    localStorage.setItem('pokeID',JSON.stringify(pokeID));
+    window.location.assign(href="results.html")
+});
+
+
+
+
+$("#userSearchBtn").on('click',function(event){
+    event.preventDefault();
+    userInput= $("#userSearch").val();
+    localStorage.setItem("userInput",JSON.stringify(userInput));
+    window.location.assign(href="search.html");
+});

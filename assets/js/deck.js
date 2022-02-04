@@ -90,3 +90,10 @@ $("#userSearchBtn").on('click',function(event){
     localStorage.setItem("userInput",JSON.stringify(userInput));
     window.location.assign(href="search.html");
 });
+
+$('.clearBtn').on('click', function(event){
+    event.preventDefault();
+    localStorage.removeItem("deckInput");
+    location.reload();
+}
+)

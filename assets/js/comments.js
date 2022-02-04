@@ -12,4 +12,8 @@
 
 // any more comments/to-do u guys have:
 
-// ** error messages/if user types in wrong or mispelled poke name, it alerts user to enter correct pokename.
+// ** to-do: error messages/if user types in wrong or mispelled poke name, it alerts user to enter correct pokename.
+
+// CREDIT: used some of this for card hover glow effect: https://codersblock.com/blog/creating-glow-effects-with-css/
+
+// add spinner.

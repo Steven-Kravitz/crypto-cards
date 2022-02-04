@@ -1,6 +1,6 @@
 /* Changed the sizing of the logos in the header */
 :root {
-    --darkColor: rgb(77, 75, 75);
+    --darkColor: #33393F;
 }
 
 header {
@@ -19,7 +19,9 @@ html {
 }
 
 body{
-    background-image: url(https://i.imgur.com/XVQ3rTs.png);}
+    background-image: url(https://i.imgur.com/4tNW92S.png);
+
+}
 
 .fab {
     font-size: 30px;
@@ -42,13 +44,15 @@ body{
     /* background-image: url(https://i.imgur.com/dzdZUhT.png); */
     background-color: var(--darkColor);
     margin: 0px 0px 0px 0px;
-    padding: 0px 0px 5px 0px;
+    padding: 0px 0px 0px 0px;
 
 }
 
 .display-4 {
     font-weight: bold;
     color: black;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 
 .lead {
@@ -56,4 +60,12 @@ body{
     color: black;
     font-size: 110%;
     padding-left: 3%;
+    margin: 0px 0px 0px 0px;
 }
+
+/* .bg {
+    background-image: url(https://i.imgur.com/EoIoLaq.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */

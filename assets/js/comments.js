@@ -8,7 +8,7 @@
 
 // HAVE TO ADD SEARCH BAR FUNCTION ON THE RESULTS PAGE.💟
 
-// ** When you click on tab in nav and go to the page, should be highlighted in the nav to let user know which page they’re on.
+// ** When you click on tab in nav and go to the page, should be highlighted in the nav to let user know which page they’re on.💟
 
 // any more comments/to-do u guys have:
 
@@ -17,3 +17,7 @@
 // CREDIT: used some of this for card hover glow effect: https://codersblock.com/blog/creating-glow-effects-with-css/
 
 // add spinner.
+
+// NAV BAR COLLAPSES WHEN YOU MAKE SCREEN SMALLER.
+// parallax scroll.
+// CREDIT: background image.

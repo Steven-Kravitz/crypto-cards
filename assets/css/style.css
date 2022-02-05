@@ -4,7 +4,7 @@
 }
 
 header {
-    background-color: var(--darkColor)
+    /* background-color: var(--darkColor) */
     /* background-image: url(https://i.imgur.com/XVQ3rTs.png); */
 }
 
@@ -13,55 +13,49 @@ header {
     /* background-image: url(https://i.imgur.com/XVQ3rTs.png); */
 }
 
-html {
+html, body{
     /* background-color: var(--darkColor); */
     /* background-image: url(https://i.imgur.com/XVQ3rTs.png); */
+    height: 100%;
 }
 
 body{
-    background-image: url(https://i.imgur.com/4tNW92S.png);
+    /* font-family: 'Archivo', sans-serif; */
+}
 
+/* have to set html and body to 100 then div container to 100 bc div container looks to parent. */
+.bg{
+    height: 100%;
+    background-image: url(https://i.ibb.co/qMKypnt/wp1902719.png);
+    /* https://i.ibb.co/WW3wTm6/field.jpg */
+    /* https://i.ibb.co/qMKypnt/wp1902719.png */
+    /* https://i.imgur.com/8jUy9XJ.jpg */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .fab {
-    font-size: 30px;
+    
+    /* font-size: 30px; */
 }
 
 .fas {
-    font-size: 30px;
+    /* font-size: 30px; */
 }
 
 /* Moved the search bar down */
-.form-inline {
+/* .form-inline {
     padding-top: 10%;
-}
+} */
 
-body{
-    font-family: 'Archivo', sans-serif;
-}
-
-.jumbotron {
-    /* background-image: url(https://i.imgur.com/dzdZUhT.png); */
-    background-color: var(--darkColor);
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-
-}
-
-.display-4 {
-    font-weight: bold;
-    color: black;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-}
-
-.lead {
+/* .lead {
     font-weight: bolder;
     color: black;
     font-size: 110%;
     padding-left: 3%;
     margin: 0px 0px 0px 0px;
-}
+} */
 
 /* .bg {
     background-image: url(https://i.imgur.com/EoIoLaq.png);
@@ -69,3 +63,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 } */
+
+#search-container{
+    padding-top: 15%;
+}

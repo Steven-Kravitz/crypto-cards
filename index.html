@@ -1,74 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- (◍ㅇᆽㅇ◍) -->
-  <title>Crypto cards ϞϞ(๑⚈ ․̫ ⚈๑)∩</title>
-  <link rel="icon" type="image/x-icon" href="assets/img/181-Ampharos.webp">
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  />
-  <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-    crossorigin="anonymous"
-  />
-  <!-- google fonts. -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- (◍ㅇᆽㅇ◍) ϞϞ(๑⚈ ․̫ ⚈๑)∩ -->
+    <title>Crypto Cards!</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/181-Ampharos.webp">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <!-- google fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
-  <link rel="stylesheet" href="assets/css/style.css"/>
-</head>
-<body>
-  <header>
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Crypto Cards</h1>
-          <p class="lead">Crypto prices for your Pokémon cards</p>
-            <i class="fab fa-bitcoin"></i>
-            <i class="fab fa-ethereum"></i>
-            <i class="fas fa-coins"></i>
-      </div>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+  </head>
+  <body>
+    <!-- NAV -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/img/181-Ampharos.webp" width="30" height="30" alt="ampharos">
+          </a>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="my-deck.html">My Deck</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="set.html">Pokémon by Set</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="type.html">Pokémon by Type</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- SEARCH -->
+    <div id="search-container" class="bg">
+      <h1 class="text-center">Crypto Cards</h1>
+      <h5 class="text-center mb-4">
+        Crypto prices for your Pokémon cards
+        <i class="pl-1 pr-1 fab fa-bitcoin"></i>
+        <i class="pr-1 fab fa-ethereum"></i>
+        <i class="pr-1 fas fa-coins"></i>
+      </h5>
+      <form class="form-inline justify-content-center">
+        <input class="form-control col-6" id="userSearch" type="search" placeholder="Call Pokémon by Name" aria-label="Search">
+        <button class="btn btn-dark" id="userSearchBtn" type="submit">Fetch'd</button>
+      </form>
     </div>
+  <!-- class="form-inline justify-content-center my-2 my-lg-0" -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="my-deck.html">My Deck</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="set.html">Pokémon by Set</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="type.html">Pokémon by Type</a>
-          </li>
-      </div>
-    </nav>
-  </header>
-  <div class="bg">
-<!-- search bar -->
-  <div class="body-area col-12">
-    <form class="form-inline justify-content-center my-2 my-lg-0">
-      <input class="form-control mr-sm-2 col-6" id="userSearch" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-secondary my-2 my-sm-0" id="userSearchBtn" type="submit">Search</button>
-    </form>
-  </div>
-
-  <!-- jquery link -->
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <!-- jqueryui link -->
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
-  <!-- our js link -->
-  <script src="assets/js/script.js"></script>
-</body></div>
+    <!-- jquery link -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- jqueryui link -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <!-- our js link -->
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>

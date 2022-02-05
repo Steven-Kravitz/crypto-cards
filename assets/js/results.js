@@ -223,5 +223,5 @@ $(".deckBtn").on('click', function(event){
     }
     localStorage.setItem("deckInput", JSON.stringify(deckInput))
     console.log(deckInput)
-    window.location.assign(href="deck.html")
+    window.location.assign(href="my-deck.html")
 })

@@ -3,6 +3,12 @@
     --darkColor: #33393F;
 }
 
+html, body{
+    /* background-color: var(--darkColor); */
+    /* background-image: url(https://i.imgur.com/XVQ3rTs.png); */
+    height: 100%;
+}
+
 header {
     /* background-color: var(--darkColor) */
     /* background-image: url(https://i.imgur.com/XVQ3rTs.png); */
@@ -13,26 +19,20 @@ header {
     /* background-image: url(https://i.imgur.com/XVQ3rTs.png); */
 }
 
-html, body{
-    /* background-color: var(--darkColor); */
-    /* background-image: url(https://i.imgur.com/XVQ3rTs.png); */
-    height: 100%;
-}
-
 body{
     /* font-family: 'Archivo', sans-serif; */
-}
-
-/* have to set html and body to 100 then div container to 100 bc div container looks to parent. */
-.bg{
-    height: 100%;
-    background-image: url(https://i.ibb.co/qMKypnt/wp1902719.png);
+    background-image: url(https://i.pinimg.com/originals/72/51/23/72512323b7eb9405b94935b7d4fd9aeb.gif);
     /* https://i.ibb.co/WW3wTm6/field.jpg */
     /* https://i.ibb.co/qMKypnt/wp1902719.png */
     /* https://i.imgur.com/8jUy9XJ.jpg */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* have to set html and body to 100 then div container to 100 bc div container looks to parent. */
+.bg{
+    height: 100%;
 }
 
 .fab {

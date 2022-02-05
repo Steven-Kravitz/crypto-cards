@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +12,11 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <!-- googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Orbitron:wght@400;500&family=Russo+One&display=swap" rel="stylesheet">
+    
     <!-- fontawesome -->
     <link
       rel="stylesheet"
@@ -23,40 +28,49 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
     <!-- our css -->
     <link rel="stylesheet" href="assets/css/search.css"/>
-</head>
-<body>
+  </head>
+
+  <body>
+    <!-- NAV -->
     <header>
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="my-deck.html">My Deck</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="set.html">Pokémon by Set</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="type.html">Pokémon by Type</a>
-                  </li>
-            </div>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" id="userSearch" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" id="userSearchBtn" type="submit">Search</button>
-            </form>
-          </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/img/181-Ampharos.webp" width="30" height="30" alt="ampharos">
+          </a>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="my-deck.html">My Deck</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="set.html">Pokémon by Set</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="type.html">Pokémon by Type</a>
+            </li>
+          </ul>
+        <!-- </div> -->
+          <form class="form-inline ml-auto">
+            <input class="form-control mr-2" id="userSearch" type="search" placeholder="search for pokémon (◍ㅇᆽㅇ◍)" aria-label="Search">
+            <button class="btn btn-dark" id="userSearchBtn" type="submit">go!</button>
+          </form>
+      </nav>
+      <!-- NOTE/BUG: including the collapsenav moves the searchbar to right, but including the collapsenav does some weird things (collapses nav/makes it disappear) when you make the window smaller. -->
+
     </header>
+    <!-- CARDS CONTAINER -->
     <div class="container">
-        <div class="row m-n1" id="cardContainer" >
-        </div>
-    </div>  
-</body>
+      <div class="row m-n1" id="cardContainer">
+    </div>
+    
   <!-- jquery link -->
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <!-- jqueryui link -->
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
-<!-- our js link -->
+  <!-- our js link -->
   <script src="assets/js/search.js"></script>
+  </body>
 </html>

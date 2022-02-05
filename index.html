@@ -13,6 +13,10 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <!-- google fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Orbitron:wght@400;500&family=Russo+One&display=swap" rel="stylesheet">
     <!-- fontawesome -->
     <link
       rel="stylesheet"
@@ -20,16 +24,13 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
-    <!-- google fonts. -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;1,100&display=swap" rel="stylesheet"> -->
+    
     <!-- jquery ui css -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
     <!-- our css -->
     <link rel="stylesheet" href="assets/css/style.css"/>
   </head>
-  
+
   <body>
     <!-- NAV -->
     <header>
@@ -52,22 +53,22 @@
               <a class="nav-link" href="type.html">Pokémon by Type</a>
             </li>
           </ul>
-        </div>
+        <!-- </div> -->
       </nav>
     </header>
 
     <!-- SEARCH -->
     <div id="search-container" class="bg">
-      <h1 class="text-center">Crypto Cards</h1>
-      <h5 class="text-center mb-4">
-        Crypto prices for your Pokémon cards
-        <i class="pl-1 pr-1 fab fa-bitcoin"></i>
-        <i class="pr-1 fab fa-ethereum"></i>
-        <i class="pr-1 fas fa-coins"></i>
+      <h1 id="title" class="text-center">crypto <span id="cards-smaller">cards</span></h1>
+      <h5 id="title-description" class="text-center mt-3 mb-4">
+        <!-- <i class="pl-1 pr-1 fab fa-bitcoin"></i> -->
+        <!-- <i class="pr-1 fab fa-ethereum"></i>
+        <i class="pr-1 fas fa-coins"></i> -->
+        Crypto Prices for Your Pokémon Cards  (◍ㅇᆽㅇ◍)
       </h5>
       <form class="form-inline justify-content-center">
-        <input class="form-control col-6" id="userSearch" type="search" placeholder="Call Pokémon by Name" aria-label="Search">
-        <button class="btn btn-outline-dark" id="userSearchBtn" type="submit">Fetch'd</button>
+        <input class="form-control col-6 mr-2 bg-dark" id="userSearch" type="search" placeholder="Call Your Pokémon By Name:" aria-label="Search">
+        <button class="btn btn-dark" id="userSearchBtn" type="submit">Catch</button>
       </form>
     </div>
   <!-- class="form-inline justify-content-center my-2 my-lg-0" -->

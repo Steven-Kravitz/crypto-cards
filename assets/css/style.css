@@ -20,7 +20,6 @@ header {
 }
 
 body{
-    /* font-family: 'Archivo', sans-serif; */
     background-image: url(https://i.pinimg.com/originals/72/51/23/72512323b7eb9405b94935b7d4fd9aeb.gif);
     /* https://i.ibb.co/WW3wTm6/field.jpg */
     /* https://i.ibb.co/qMKypnt/wp1902719.png */
@@ -28,11 +27,30 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Manrope', sans-serif;
 }
 
 /* have to set html and body to 100 then div container to 100 bc div container looks to parent. */
 .bg{
     height: 100%;
+}
+
+#search-container{
+    padding-top: 15%;
+}
+
+#title{
+    font-family: 'Orbitron', sans-serif;
+}
+
+#cards-smaller{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+#title-description{
+    font-size: 18px;
 }
 
 .fab {
@@ -63,7 +81,3 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 } */
-
-#search-container{
-    padding-top: 15%;
-}

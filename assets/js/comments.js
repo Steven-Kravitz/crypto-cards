@@ -21,3 +21,4 @@
 // NAV BAR COLLAPSES WHEN YOU MAKE SCREEN SMALLER.
 // parallax scroll.
 // CREDIT: background image.
+// ****************come back to homepage, move on to styling rest of pages.************

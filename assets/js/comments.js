@@ -22,3 +22,5 @@
 // parallax scroll.
 // CREDIT: background image.
 // ****************come back to homepage, move on to styling rest of pages.************
+// ****** nav ******
+// possibly add header to search page: pokemon user searched for?

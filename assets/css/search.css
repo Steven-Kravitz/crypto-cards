@@ -1,3 +1,13 @@
+
+body{
+    background-color: #1D1E26;
+    /* #0D0D0D #1D1E26 */
+}
+
+nav{
+    font-family: 'Manrope', sans-serif;
+}
+
 .card{
     width: 250px;
     height: 350px;
@@ -9,12 +19,6 @@
     margin: 20px 20px 20px 20px;
 }
 
-#change {
-    max-width:280px;
-    height:400px;
-    margin: 0
-}
-
 img:hover {
     transform: scale(1.10);
     box-shadow: 0 0 5px #fff, 0 0 19px #f0f, 0 0 40px #0ff;
@@ -22,4 +26,11 @@ img:hover {
     /* 0 0 60px 30px #fff,  inner white
     0 0 100px 60px #f0f, middle magenta
     0 0 140px 90px #0ff; outer cyan */
+}
+
+/* makes last row line up w rest of cards. */
+#change {
+    max-width:280px;
+    height:400px;
+    margin: 0
 }

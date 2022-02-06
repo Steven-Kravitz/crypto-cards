@@ -23,8 +23,9 @@ var chosenPoke=JSON.parse(localStorage.getItem("pokeID"))
 //load in Crypto Rates
 
 for(var i = 0; i < cryptoTickers.length; i++){
-    fetch('https://rest.coinapi.io/v1/exchangerate/USD/' + cryptoTickers[i] + '?apikey=' + coinAPIKeys[2])
+    fetch('https://rest.coinapi.io/v1/exchangerate/USD/' + cryptoTickers[i] + '?apikey=' + coinAPIKeys[3])
         .then(function(response){
+            // console.log(response)
             return response.json();
         }).then(function(data){
             cryptoInfo[data.asset_id_quote]=data.rate;
@@ -66,6 +67,47 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
             <div id="poke-prices" class="my-3"></div>
             <button class="deckBtn btn btn-dark my-2">Add to Deck</button>`).appendTo("#poke-detail");
 
+            var pokeType=data.data.types[0]
+            switch(pokeType){
+             case 'Lightning':
+                 $(`<img id="pokeType" src="assets/img/electric.png" alt="electric type symbol">`).appendTo("#poke-name");
+                 break;
+             case 'Colorless':
+                 $(`<img id="pokeType" src="assets/img/colorless.png" alt="colorless type symbol"></span>`).appendTo("#poke-name");
+                 break;
+             case 'Dark':
+                 $(`<img id="pokeType" src="assets/img/dark.png" alt="dark type symbol">`).appendTo("#poke-name");
+                 break;
+             case 'Fairy':
+                 $(`<img id="pokeType" src="assets/img/fairy.png" alt="fairy type symbol">`).appendTo("#poke-name");
+                 break;
+             case 'Fighting':
+                 $(`<img id="pokeType" src="assets/img/fighting.png" alt="fighting type symbol">`).appendTo("#poke-name");
+                 break;
+             case 'Fire':
+                 $(`<img id="pokeType" src="assets/img/fire.png" alt="fire type symbol">`).appendTo("#poke-name");
+                 break;
+             case 'Grass':
+                 $(`<img id="pokeType" src="assets/img/grass.png" alt="grass type symbol">`).appendTo("#poke-name");
+                 break;
+             case 'Metal':
+                 $(`<img id="pokeType" src="assets/img/metal.png" alt="metal type symbol">`).appendTo("#poke-name");
+                 break;
+             case 'Dragon':
+                 $(`<img id="pokeType" src="assets/img/dragon.png" alt="dragon type symbol">`).appendTo("#poke-name");
+                 break;
+             case 'Psychic':
+                 $(`<img id="pokeType" src="assets/img/psychic.png" alt="psychic type symbol">`).appendTo("#poke-name");
+                 break;
+             case 'Water':
+                 $(`<img id="pokeType" src="assets/img/water.png" alt="water type symbol">`).appendTo("#poke-name");
+                 break;
+                 default:
+                 };
+         
+            var buyURL=data.data.tcgplayer.url;
+            $(`<a href="${buyURL}" target="_blank">Buy now from TCGPlayer!</a>`).appendTo(".line1TCG");
+
        if ("normal" in data.data.tcgplayer.prices){
         var normalPrices = data.data.tcgplayer.prices.normal;
         $(`<h5>Normal Market Price: ${normalPrices.market} USD</h5>`).appendTo("#poke-prices")
@@ -86,7 +128,6 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
         var holofoilPrices=data.data.tcgplayer.prices.holofoil;
         $(`<h5>Holofoil Market Price: ${holofoilPrices.market} USD</h5>`).appendTo("#poke-prices")
         holofoilPriceInCrypto={}
-        
         for(i=0;i<cryptoTickers.length;i++){
             var dummy=Object.keys(cryptoInfo)[i]
             //console.log(cryptoInfo[dummy]);
@@ -163,46 +204,6 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
         //console.log("unlimitedHolofoil is in the price list");
        };
        
-    //    var pokeType=data.data.types[0]
-    //    switch(pokeType){
-    //     case 'Lightning':
-    //         $(`<img id="pokeType" src="assets/img/electric.png" alt="electric type symbol">`).appendTo("#poke-name");
-    //         break;
-    //     case 'Colorless':
-    //         $(`<img id="pokeType" src="assets/img/colorless.png" alt="colorless type symbol"></span>`).appendTo("#poke-name");
-    //         break;
-    //     case 'Dark':
-    //         $(`<img id="pokeType" src="assets/img/dark.png" alt="dark type symbol">`).appendTo("#poke-name");
-    //         break;
-    //     case 'Fairy':
-    //         $(`<img id="pokeType" src="assets/img/fairy.png" alt="fairy type symbol">`).appendTo("#poke-name");
-    //         break;
-    //     case 'Fighting':
-    //         $(`<img id="pokeType" src="assets/img/fighting.png" alt="fighting type symbol">`).appendTo("#poke-name");
-    //         break;
-    //     case 'Fire':
-    //         $(`<img id="pokeType" src="assets/img/fire.png" alt="fire type symbol">`).appendTo("#poke-name");
-    //         break;
-    //     case 'Grass':
-    //         $(`<img id="pokeType" src="assets/img/grass.png" alt="grass type symbol">`).appendTo("#poke-name");
-    //         break;
-    //     case 'Metal':
-    //         $(`<img id="pokeType" src="assets/img/metal.png" alt="metal type symbol">`).appendTo("#poke-name");
-    //         break;
-    //     case 'Dragon':
-    //         $(`<img id="pokeType" src="assets/img/dragon.png" alt="dragon type symbol">`).appendTo("#poke-name");
-    //         break;
-    //     case 'Psychic':
-    //         $(`<img id="pokeType" src="assets/img/psychic.png" alt="psychic type symbol">`).appendTo("#poke-name");
-    //         break;
-    //     case 'Water':
-    //         $(`<img id="pokeType" src="assets/img/water.png" alt="water type symbol">`).appendTo("#poke-name");
-    //         break;
-    //         default:
-    //         };
-    
-    //    var buyURL=data.data.tcgplayer.url;
-    //    $(`<a href="${buyURL}" target="_blank">Buy now from TCGPlayer!</a>`).appendTo(".line1TCG");
     });
 
 

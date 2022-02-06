@@ -65,6 +65,10 @@ body{
     text-align: center;
 }
 
+.setTitle {
+    cursor: pointer;
+}
+
 /* To make the words and not sit under the card - might use media query */
 /* @media (max-width: 990px) {
     .pokeName {

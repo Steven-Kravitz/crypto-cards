@@ -1,10 +1,41 @@
-.deckBtn{
-    height: min-content;
+body{
+  background-color: #1D1E26;
+  font-family: 'Manrope', sans-serif;
 }
+
+#poke-pic{
+  width: 445px;
+  border: none;
+  border-radius: 13px;
+}
+
+#poke-pic:hover{
+  transform: scale(1.03);
+  box-shadow: 0 0 5px #fff, 0 0 19px #f0f, 0 0 40px #0ff;
+}
+
+#pokeinfo-container{
+  color: whitesmoke;
+  cursor: default;
+}
+
+/* type symbol */
 #pokeType{
-    height:25px;
-    width: 25px;
+  height: 25px;
+  width: 25px;
 }
+
+#mp-tcg-title{
+  font-size: 17px;
+}
+
+/* buy now tcg link */
+#buy-now-tcg{
+  color: rgb(203, 240, 243);
+  font-size: 16px;
+}
+
+
 #loader {
     position: absolute;
     left: 50%;
@@ -19,7 +50,7 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
   }
-  
+
   @-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); }

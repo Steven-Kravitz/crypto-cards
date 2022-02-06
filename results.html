@@ -5,10 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto cards</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon_ampharos.png">
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <!-- google fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Orbitron:wght@400;500&family=Russo+One&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -18,82 +25,46 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
     <link rel="stylesheet" href="assets/css/results.css"/>
 </head>
+<!-- spinner I'm assuming? -->
 <body onload="myFunction()" style="margin:0;">
   <div id="loader"></div>
-  <div id="myDiv">
+  <div id="myDiv"></div>
     <header>
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="my-deck.html">My Deck</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="set.html">Pokémon by Set</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="type.html">Pokémon by Type</a>
-                  </li>
-            </div>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" id="userSearch" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" id="userSearchBtn" type="submit">Search</button>
-            </form>
-          </nav>
+      <nav class="navbar navbar-expand navbar-dark">
+        <a class="navbar-brand ml-2">
+          <img src="assets/img/brand_ampharos.gif" width="40" height="40" alt="ampharos">
+        </a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="my-deck.html">My Deck</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="set.html">Pokémon by Set</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="type.html">Pokémon by Type</a>
+          </li>
+        </ul>
+        <form class="form-inline ml-auto">
+          <input class="form-control mr-2" id="userSearch" type="search" placeholder="Search for Pokémon" aria-label="Search">
+          <button class="btn btn-dark" id="userSearchBtn" type="submit">Go!</button>
+        </form>
+      </nav>
     </header>
-    <div class="container">
+
+    <div id="pokeinfo-container" class="container">
         <div class="row">
-            <div class="col" id="column1">
-               
-            </div>
-            <div class="col" id="column2">
-                <div class="cardDetails">
-                    <nav class="topText">
-                        <h1 class="cardName">
-                            
-                        </h1>
-                        <h3 class="cardSetName">
-
-                        </h3>
-                        <button class="deckBtn btn-secondary btn">Add Card to Deck</button>
-                    </nav>
-                    <hr>
-                    <section class="pricesinDollars">
-                        <h4>Price, brought to you by TCGplayer</h4>
-                        <div class="tcgPlayerSecction">
-                            <div class="line1TCG">
-                            </div>
-                            <section class="line2 row">
-
-                                <div class="normal">
-                                </div>
-
-                                <div class="holofoil">
-                                </div>
-
-                                <div class="reverseHolofoil">
-                                </div>
-
-                                <div class="1stEditionHolofoil ">
-                                </div>
-
-                                <div class="1stEditionNormal ">
-                                </div>
-                                <div class="unlimitedHolofoil">
-                                </div>
-
-                            </section>
-                        </div>
-
-                    </section>
-                </div>
-            </div>
+            <!-- image div -->
+            <div class="col" id="poke-image"></div>
+            <!-- details div -->
+            <div class="col" id="poke-detail"></div>
         </div>
     </div>
-  </div>
+
+  <!-- rest of the spinner I believe? -->
   <script>
     var myVar;
     
@@ -107,11 +78,14 @@
       document.getElementById("myDiv").style.display = "block";
     }
     </script>
-</body>
+
+
   <!-- jquery link -->
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <!-- jqueryui link -->
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
-<!-- our js link -->
+  <!-- our js link -->
   <script src="assets/js/results.js"></script>
+</body>
+
 </html>

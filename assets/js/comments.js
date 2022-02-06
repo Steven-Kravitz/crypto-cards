@@ -24,3 +24,11 @@
 // ****************come back to homepage, move on to styling rest of pages.************
 // ****** nav ******
 // possibly add header to search page: pokemon user searched for?
+
+// credit: https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9630fe91-d0a5-42ac-a552-39a5b486fa41/dd6pyqe-8ba6a954-92de-4d7b-bc1e-6674f6b81de6.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzk2MzBmZTkxLWQwYTUtNDJhYy1hNTUyLTM5YTViNDg2ZmE0MVwvZGQ2cHlxZS04YmE2YTk1NC05MmRlLTRkN2ItYmMxZS02Njc0ZjZiODFkZTYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.058XA3uBqdVdQBXxIzoMsxQdjdqAV1nUreolZD5CjOA
+
+//future development: on search page if you hover OR click on a card it'll tell you information on the card instead of going to another page. just as a dialog box or something.
+//possible to display clear my deck button only after user has added a card? if my deck is empty, clear my deck button does not show.
+// shoutout/credit: adobe color.
+
+// f*ck around with the search cards container later.

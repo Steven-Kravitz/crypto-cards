@@ -1,3 +1,40 @@
+// credit: https://www.sitepoint.com/delay-sleep-pause-wait/
+function sleep(milliseconds){
+    const date = Date.now();
+    let currentDate = null;
+    do {
+        currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+    }
+// Add if statement swapping API keys at limit
+var priscillasApi = "612EED13-BBA7-4E82-AF79-78955F897E68" // :)
+var stevensAPI = "865395AE-4F4E-48D5-A825-65822194FDE7" // :D
+var jenAPI = "2FEC7249-7A76-4CEB-AB8B-EEEB43C6F19E" // ^-^
+var chrisAPI = "EE0B3E38-CFD9-4BEE-8F5D-BF82AE6DD7BF" // O.O
+var API4 = "0170C7D3-5CE3-439D-9CD6-03FCCAB690D8" // >_>
+var API5 = "560272A5-C7A4-4E7F-A828-1CFF45654C33" //o_O
+var coinAPIKeys = [priscillasApi, stevensAPI, jenAPI, chrisAPI,API4,API5]
+// Add more cryptos for later
+//                    1        2       3
+var cryptoTickers = ['BTC', 'ETH', 'USDT'];
+var cryptoInfo = {};
+var chosenPoke=JSON.parse(localStorage.getItem("pokeID"))
+//load in Crypto Rates
+
+for(var i = 0; i < cryptoTickers.length; i++){
+    fetch('https://rest.coinapi.io/v1/exchangerate/USD/' + cryptoTickers[i] + '?apikey=' + coinAPIKeys[1])
+        .then(function(response){
+            return response.json();
+        }).then(function(data){
+            cryptoInfo[data.asset_id_quote]=data.rate;
+        }).then(function(){})
+
+sleep(500)
+}
+
+
+
+
 var deckInput= JSON.parse(localStorage.getItem("deckInput"))
 console.log(deckInput);
 // when user searches, goes to search page.
@@ -41,11 +78,17 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
     $(`<div class="row py-2" id="card-deck">
             <div class="col-3"><img class="pokeCard" data-id=${pokeID} src="${cardImage}"></div>
             <div class="col-9 pokeInfo py-4 px-4">
+            <button class="removeBtn btn" data-id=${pokeID}>Remove Card</Button>
             <h3>${pokeName}</h3>
             <h5 class="text-muted" data-setid="${setId}"id='setTitle'>${pokeSetName}</h5>
             <div id=${pokeID} class="py-3"></div>
             </div>
         </div>`).appendTo("#deckBuilder")
+
+        $('#deckBuilder').on('click', '.removeBtn', function(event){
+            event.stopPropagation();
+            console.log(`You clicked button ${pokeID}`)
+        })
     
     if ("normal" in data.data[j].tcgplayer.prices){
         var normalPrices=data.data[j].tcgplayer.prices.normal;
@@ -106,6 +149,5 @@ $('.clearBtn').on('click', function(event){
     location.reload();
 }
 )
-
 
 

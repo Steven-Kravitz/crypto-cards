@@ -58,13 +58,12 @@ body{
 }
 
 .fab {
-    
-    /* font-size: 30px; */
+    font-size: 21px;
 }
 
-.fas {
+/* .fas { */
     /* font-size: 30px; */
-}
+/* } */
 
 /* Moved the search bar down */
 /* .form-inline {

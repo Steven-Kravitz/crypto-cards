@@ -12,7 +12,7 @@ nav{
     width: 250px;
     height: 350px;
     cursor: pointer;
-    /* border-radius: 10px; */
+    border-radius: 12px;
     border: none;
 }
 

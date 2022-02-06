@@ -30,7 +30,28 @@ Through this app, you can look up a Pokémon card and see how much of a certain 
 
 ## Usage
 
+Homepage:
+![homepage](/assets/img/00-Homepage.png)
 
+<br/>
+
+My Deck:
+![deckpage](/assets/img/00-my-deck-page.jpg)
+
+<br/>
+
+Set Page:
+![setpage](/assets/img/00-set-page.jpg)
+
+<br/>
+
+Type Page:
+![typepage](/assets/img/00-type-page.jpg)
+
+<br/>
+
+Individual Card with Crypto Prices:
+![cryptopage](/assets/img/00-individual-card-page.png)
 
 <br/>
 
@@ -51,6 +72,14 @@ Through this app, you can look up a Pokémon card and see how much of a certain 
 [CoinAPI.io](https://docs.coinapi.io/#md-docs)
 
 [JavaScript Sleep Function - Delay, Sleep, Pause, & Wait JavaScript](https://www.sitepoint.com/delay-sleep-pause-wait/)
+
+[Ampharos Pixel Gif](https://www.deviantart.com/aurra-black/art/Ampharos-Pixel-Gif-797349398)
+
+[Ampharos Pixel Art](http://pixelartmaker.com/art/a4fa98c7c21c825)
+
+[Background Masterpost](https://www.pinterest.com/pin/128423026861195977/)
+
+[Glow Effects with CSS](https://codersblock.com/blog/creating-glow-effects-with-css/)
 
 <br/>
 

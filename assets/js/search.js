@@ -13,7 +13,9 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=name:${userInput}`,{
 })
 // Turning into the json object
     .then(function(response){
+        //console.log(response);
         return response.json()
+        
     })
 // Drilling down to the first entry
     .then(function(data){
@@ -29,6 +31,10 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=name:${userInput}`,{
                     <img class="cardClick pokes" data-pokeID=${pokeID} src="${imageURL}">
                 </div>
             </div>`).appendTo("#cardContainer")
+    }
+    if (data.data.length===0){
+        console.log("no pokemon by this Name")
+        window.location.assign(href="search404.html")
     }
     })
 }

@@ -33,3 +33,7 @@
 // results, set-results, type-results. bugs/details. spinners. read-me. presentation.
 
 // fix price description in my deck. jen is working on that page rn so can't touch.
+
+// what if user adds multiple of the same card to deck?
+// ERROR MESSAGE IF USER TYPES POKE NAME WRONG IN SEARCH.
+// change all input boxes to black with white text, border black.

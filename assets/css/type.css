@@ -8,6 +8,10 @@ body{
     height: 100%;
 }
 
+.form-control{
+    border: black;
+}
+
 .type-header{
     color: whitesmoke;
     cursor: default;

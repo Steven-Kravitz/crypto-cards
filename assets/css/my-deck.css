@@ -101,3 +101,17 @@ body{
         display: none;s
     }
   } */
+
+#mobileSearch {
+    display: none;
+}
+
+@media screen and (max-width: 497px) {
+    #desktopSearch{
+        display: none;
+    }
+    #mobileSearch {
+        display: flex;
+    }
+    
+}

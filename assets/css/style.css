@@ -3,7 +3,7 @@
     /* --darkColor: #33393F; */
 }
 
-html, body{
+html{
     /* background-color: var(--darkColor); */
     /* background-image: url(https://i.imgur.com/XVQ3rTs.png); */
     height: 100%;
@@ -20,6 +20,7 @@ header {
 }
 
 body{
+    height: 100%;
     background-image: url(https://i.pinimg.com/originals/72/51/23/72512323b7eb9405b94935b7d4fd9aeb.gif);
     /* https://i.ibb.co/WW3wTm6/field.jpg */
     /* https://i.ibb.co/qMKypnt/wp1902719.png */
@@ -31,9 +32,9 @@ body{
 }
 
 /* have to set html and body to 100 then div container to 100 bc div container looks to parent. */
-.bg{
+/* .bg{
     height: 100%;
-}
+} */
 
 #search-container{
     padding-top: 15%;

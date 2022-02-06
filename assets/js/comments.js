@@ -32,3 +32,6 @@
 // shoutout/credit: adobe color.
 
 // f*ck around with the search cards container later.
+// change clear my deck btn, right now its btn-secondary.
+// media queries
+// credit favicon and brand images.

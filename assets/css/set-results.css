@@ -6,6 +6,7 @@ body{
 .set-name {
     text-align: center;
     color: whitesmoke;
+    cursor: default;
 }
 
 #text-smaller{

@@ -6,6 +6,7 @@ body{
 .type-name {
     text-align: center;
     color: whitesmoke;
+    cursor: default;
 }
 
 #text-smaller{
@@ -22,7 +23,7 @@ body{
 
 #poke-card:hover {
     transform: scale(1.10);
-    box-shadow: 0 0 5px #fff, 0 0 19px rgb(215, 47, 221), 0 0 40px rgb(199, 74, 216);
+    box-shadow: 0 0 5px #fff, 0 0 19px rgb(215, 47, 221), 0 0 40px rgb(226, 96, 243);
 }
 
 .m-n1{

@@ -6,12 +6,13 @@ body{
 
 /* setting font color to white for now so I could see it against the black bg while I'm working lol. */
 #main-text{
-    color: white;
+    color: whitesmoke;
 }
 
 /* Centering the "My Deck" header */
 #my-deck-pagetitle {
     text-align: center;
+    cursor: default;
 }
 
 /* Adding padding/space in between words and the card */

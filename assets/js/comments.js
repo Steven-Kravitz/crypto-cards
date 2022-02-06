@@ -1,16 +1,9 @@
 // https://api.pokemontcg.io/v2/cards
 
-// New pages:
-// 1. Search page/results
-// 2. My Deck
-// 3. Pokemon by set
-// 4. Pokemon by type
-
 // HAVE TO ADD SEARCH BAR FUNCTION ON THE RESULTS PAGE.💟
-
 // ** When you click on tab in nav and go to the page, should be highlighted in the nav to let user know which page they’re on.💟
-
-// any more comments/to-do u guys have:
+// f*ck around with the search cards container later.🤎
+// change clear my deck btn, right now its btn-secondary.💚
 
 // ** to-do: error messages/if user types in wrong or mispelled poke name, it alerts user to enter correct pokename.
 
@@ -31,8 +24,6 @@
 //possible to display clear my deck button only after user has added a card? if my deck is empty, clear my deck button does not show.
 // shoutout/credit: adobe color.
 
-// f*ck around with the search cards container later.
-// change clear my deck btn, right now its btn-secondary.
 // media queries
 // credit favicon and brand images.
 // change font colour on pages against dark bg? idk if want to keep the white...

@@ -80,7 +80,7 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
             <div class="col-9 pokeInfo py-4 px-4">
             <button class="removeBtn btn" data-id=${pokeID}>Remove Card</Button>
             <h3>${pokeName}</h3>
-            <h5 class="text-muted" data-setid="${setId}"id='setTitle'>${pokeSetName}</h5>
+            <h5 class="setTitle text-muted" data-setid="${setId}">${pokeSetName}</h5>
             <div id=${pokeID} class="py-3"></div>
             </div>
         </div>`).appendTo("#deckBuilder")
@@ -183,7 +183,7 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
         // $(`<div class="row">
         //     <p class="pokeName">${pokeName}</p>  
         // `).appendTo(".cardInfoContainer")
-        $('#setTitle').on('click',function(event){
+        $('.setTitle').on('click',function(event){
             var el = event.target
                 console.log(el)
                 var setId = el.dataset.setid

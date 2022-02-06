@@ -5,10 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto cards</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/a4fa98c7c21c825.png">
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <!-- google fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Orbitron:wght@400;500&family=Russo+One&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -20,28 +27,31 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="my-deck.html">My Deck</a>
-          </li>
-          <li class="nav-item active">
-              <a class="nav-link" href="set.html">Pokémon by Set</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="type.html">Pokémon by Type</a>
-            </li>
-      </div>
-      <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" id="userSearch" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-secondary my-2 my-sm-0" id="userSearchBtn" type="submit">Search</button>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand ml-2">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9630fe91-d0a5-42ac-a552-39a5b486fa41/dd6pyqe-8ba6a954-92de-4d7b-bc1e-6674f6b81de6.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzk2MzBmZTkxLWQwYTUtNDJhYy1hNTUyLTM5YTViNDg2ZmE0MVwvZGQ2cHlxZS04YmE2YTk1NC05MmRlLTRkN2ItYmMxZS02Njc0ZjZiODFkZTYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.058XA3uBqdVdQBXxIzoMsxQdjdqAV1nUreolZD5CjOA" width="40" height="40" alt="ampharos">
+      </a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="my-deck.html">My Deck</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="set.html">Pokémon by Set</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="type.html">Pokémon by Type</a>
+        </li>
+      </ul>
+      <form class="form-inline ml-auto">
+        <input class="form-control mr-2" id="userSearch" type="search" placeholder="search for pokémon (◍ㅇᆽㅇ◍)" aria-label="Search">
+        <button class="btn btn-dark" id="userSearchBtn" type="submit">go!</button>
       </form>
     </nav>
   </header>
+
   <div class="container">
     <h2> Pokémon Sets: </h2>
     <div class="column" id="all-sets">
@@ -49,11 +59,14 @@
 
     </div>
   </div>
+
+
+
+  <!-- jquery link -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <!-- jqueryui link -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+  <!-- our js link -->
+  <script src="assets/js/set.js"></script>
 </body>
-    <!-- jquery link -->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <!-- jqueryui link -->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
-    <!-- our js link -->
-    <script src="assets/js/set.js"></script>
 </html>

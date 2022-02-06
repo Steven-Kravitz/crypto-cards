@@ -29,6 +29,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Manrope', sans-serif;
+    background-color: #1D1E26;
 }
 
 /* have to set html and body to 100 then div container to 100 bc div container looks to parent. */

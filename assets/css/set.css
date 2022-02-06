@@ -3,12 +3,23 @@ body{
     font-family: 'Manrope', sans-serif;
 }
 
-.container {
+/* title of page */
+#sets-header{
+    color: white;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
 }
 
-#set-id-name {
+/* row container holding all h5s */
+#all-sets{
+    color: rgb(236, 236, 236);
+    /* font-family: 'Russo One', sans-serif; */
+}
+
+#set-name {
     cursor: pointer;
+    font-size: 23px;
+}
+
+#set-name:hover{
+    color: rgb(228, 228, 155);
 }

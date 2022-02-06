@@ -4,20 +4,20 @@ fetch('https://api.pokemontcg.io/v2/sets')
         return response.json();
     })
     .then(function(data){
-        console.log(data.data);
-        console.log(data)
+        // console.log(data.data);
+        // console.log(data)
         
         for (var i=0; i<data.data.length; i++){
         var setName = data.data[i].name
         var setId = data.data[i].id
-        //console.log(setId)
+        // console.log(setName)
         //console.log(data.data[i].name)
-        $(`<div class"container" id="set-id-name">
-        <p class="setname" data-setid=${setId} data-name=${setName}>${setName}</p>
-        </div>`).appendTo("#all-sets")
+        $(`<h5 id="set-name" class="my-4 mx-2" data-setid=${setId} data-name=${setName}>${setName}</h5>`).appendTo("#all-sets")
 
-        // Each word is a button
-        $("p").on('click',function(event){
+// <button id="set-name" type="button" class="btn btn-success btn-lg my-3 mx-3" data-setid=${setId} data-name=${setName}>${setName}</button>
+
+        // Each word is a button. weird click event only works when its h5, not when you target by id name "set-name" ...
+        $("h5").on('click',function(event){
             var el = event.target
             console.log(el)
             var setId = el.dataset.setid

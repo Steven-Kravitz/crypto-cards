@@ -5,13 +5,11 @@
 // f*ck around with the search cards container later.🤎
 // change clear my deck btn, right now its btn-secondary.💚
 
-// ** to-do: error messages/if user types in wrong or mispelled poke name, it alerts user to enter correct pokename.
 
 // CREDIT: used some of this for card hover glow effect: https://codersblock.com/blog/creating-glow-effects-with-css/
 
-// add spinner.
 
-// NAV BAR COLLAPSES WHEN YOU MAKE SCREEN SMALLER.
+
 // parallax scroll.
 // CREDIT: background image.
 // ****************come back to homepage, move on to styling rest of pages.************
@@ -24,16 +22,20 @@
 //possible to display clear my deck button only after user has added a card? if my deck is empty, clear my deck button does not show.
 // shoutout/credit: adobe color.
 
-// media queries
+
 // credit favicon and brand images.
-// change font colour on pages against dark bg? idk if want to keep the white...
 // future dev, having alts for images?
 
 // TO-DO:
 // results, set-results, type-results. bugs/details. spinners. read-me. presentation.
 
-// fix price description in my deck. jen is working on that page rn so can't touch.
 
 // what if user adds multiple of the same card to deck?
 // ERROR MESSAGE IF USER TYPES POKE NAME WRONG IN SEARCH.
+
+
+
+// still media queries- should prob apply the mobile search bar to all applicable pages.
+// fix price description in my deck. jen is working on that page rn so can't touch.
 // change all input boxes to black with white text, border black.
+// consider navbar collapse feature.

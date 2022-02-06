@@ -26,7 +26,7 @@ function getCards(pokeType){
             console.log(data);
             var typeName = data.data[0].types
             console.log(typeName)
-            $(`<h1 class="type-name">Type: ${typeName}</h1>`).appendTo(".type-name")
+            $(`<h2>Type: <span id="text-smaller">${typeName}</span></h2>`).appendTo(".type-name")
 
             for (i = 0; i < data.data.length; i++){
             console.log(data.data[i]);
@@ -35,14 +35,14 @@ function getCards(pokeType){
             //console.log(data.data[i].tcgplayer.prices)
             var imageURL=data.data[i].images.large
             var pokeID=data.data[i].id
-            $(`<div class="container col" id="change">
-            <div class="row card mt-5">
-                <img class="card-img-top cardClick" data-pokeID=${pokeID} src="${imageURL}">
-            </div>
-        </div>`).appendTo("#type-container")
-        }
-        })
-}
+            $(`<div class="col" id="change">
+                    <div class="row my-5">
+                        <img id="poke-card" class="cardClick" data-pokeID=${pokeID} src="${imageURL}">
+                    </div>
+                </div>`).appendTo("#type-container");
+            };
+        });
+};
 
 $("#type-container").on('click',".cardClick", function(event){
     var element = event.target

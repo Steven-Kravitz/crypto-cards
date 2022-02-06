@@ -1,20 +1,36 @@
-.card{
+body{
+    background-color: #1D1E26;
+    font-family: 'Manrope', sans-serif;
+}
+
+.type-name {
+    text-align: center;
+    color: whitesmoke;
+}
+
+#text-smaller{
+    font-size: 31px;
+}
+
+#poke-card{
     width: 250px;
     height: 350px;
     cursor: pointer;
+    border: none;
+    border-radius: 12px;
+}
+
+#poke-card:hover {
+    transform: scale(1.10);
+    box-shadow: 0 0 5px #fff, 0 0 19px rgb(215, 47, 221), 0 0 40px rgb(199, 74, 216);
+}
+
+.m-n1{
+    margin: 20px 20px 20px 20px;
 }
 
 #change {
     max-width:280px;
     height:400px;
     margin: 0
-}
-
-img:hover {
-    transform: scale(1.10);
-}
-
-h1 {
-    text-align: center;
-    padding-top: 40px;
 }

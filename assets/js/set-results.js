@@ -18,7 +18,7 @@ function getSet(chosenSetId){
         console.log(data.data)
         
             var setName=data.data[0].set.name
-            $(`<h1 class="set-name">Set: ${setName}</h1>`).appendTo(".set-name")
+            $(`<h2 class="set-name">Set: <span id="text-smaller">${setName}</span></h2>`).appendTo(".set-name")
 
 
         for (i = 0; i < data.data.length; i++){
@@ -30,18 +30,12 @@ function getSet(chosenSetId){
             var imageSetsURL=data.data[i].images.large
             var setsID=data.data[i].id
 
-            $(`<div class="container col" id="change">
-                    <div class="row card mt-5">
-                        <img class="card-img cardClick" data-setID=${setsID} src="${imageSetsURL}">
+            $(`<div class="col" id="change">
+                    <div class="row my-5">
+                        <img id="poke-card" class="cardClick" data-setID=${setsID} src="${imageSetsURL}">
                     </div>
                 </div>`).appendTo("#cardContainer")
-            
-            
-            
-
         
-
-
     }})
 }
 

@@ -25,10 +25,10 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=name:${userInput}`,{
         var imageURL=data.data[i].images.large
         var pokeID=data.data[i].id
         $(`<div class="container col" id="change">
-        <div class="row card mt-5">
-            <img class="card cardClick" data-pokeID=${pokeID} src="${imageURL}">
-        </div>
-    </div>`).appendTo("#cardContainer")
+                <div class="row card mt-5">
+                <img class="card cardClick pokes" data-pokeID=${pokeID} src="${imageURL}">
+                </div>
+            </div>`).appendTo("#cardContainer")
     }
     })
 }

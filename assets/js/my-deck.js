@@ -78,13 +78,13 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
         
     // each card that is added to My Deck gets a row with cols inside.
     $(`<div class="row py-2" id="card-deck">
-            <div class="col-3"><img class="pokeCard" data-id=${pokeID} src="${cardImage}"></div>
-            <div class="col-7 pokeInfo py-4 px-4">
+            <div class="col-9 col-xl-3"><img class="pokeCard" data-id=${pokeID} src="${cardImage}"></div>
+            <div class="col col-xl-7 pokeInfo py-4 px-4">
                 <h3 id="poke-name">${pokeName}</h3>
                 <h5 class="setTitle text-muted" data-setid="${setId}">${pokeSetName}</h5>
                 <div id=${pokeID} class="py-3 poke-prices"></div>
             </div>
-            <div class="col-2 pt-5"><button class="removeBtn btn btn-dark btn-sm" data-id=${pokeID} id=${pokeID}>Remove</button></div>
+            <div class="col col-xl-2 pt-5"><button class="removeBtn btn btn-dark btn-sm" data-id=${pokeID} id=${pokeID}>Remove</button></div>
         </div>`).appendTo("#deckBuilder")
 
         $(`.removeBtn`).on('click', function(event){

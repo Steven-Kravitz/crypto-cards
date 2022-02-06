@@ -74,6 +74,20 @@ body{
     text-align: center;
 }
 
+#mobileSearch {
+    display: none;
+}
+
+@media screen and (max-width: 497px) {
+    #desktopSearch{
+        display: none;
+    }
+    #mobileSearch {
+        display: flex;
+    }
+    
+}
+
 /* To make the words and not sit under the card - might use media query */
 /* @media (max-width: 990px) {
     .pokeName {
@@ -106,17 +120,3 @@ body{
         display: none;s
     }
   } */
-
-#mobileSearch {
-    display: none;
-}
-
-@media screen and (max-width: 497px) {
-    #desktopSearch{
-        display: none;
-    }
-    #mobileSearch {
-        display: flex;
-    }
-    
-}

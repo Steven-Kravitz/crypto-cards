@@ -1,9 +1,45 @@
-#container-one {
+html{
+    height: 100%;
+}
+
+body{
+    background-color: #1D1E26;
+    font-family: 'Manrope', sans-serif;
+    height: 100%;
+}
+
+.type-header{
+    color: white;
+}
+
+.type-name{
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.type-name:hover{
+    color: rgb(247, 197, 247);
+}
+
+/* container for the types. */
+#type-main{
+    color: rgb(233, 233, 233);
+}
+
+/* #container-one {
     text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;
-}
+} */
 
-#type-id-name {
+/* #type-id-name {
     cursor: pointer;
-}
+} */
+
+/* .bg{
+    background-image: url(https://c.tenor.com/P9pPZ1prRCMAAAAd/pokemon-pikachu.gif);
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */

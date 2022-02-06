@@ -9,68 +9,60 @@ body{
     color: white;
 }
 
-.card {
-    width: 150px;
-    height: 225px;
-    transform: scale(1.10);
-}
-
 /* Centering the "My Deck" header */
-h1 {
+#my-deck-pagetitle {
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
 }
 
 /* Adding padding/space in between words and the card */
-#card-deck {
+/* #card-deck {
     padding-top: 50px;
-}
+} */
 
-.pokeName {
-    padding-left: 70px;
-    padding-top: 15px;
-    font-size: 140%;
+/* .pokeName { */
+    /* padding-left: 70px;
+    padding-top: 15px; */
+    /* font-size: 140%; */
     
-}
+/* } */
 
-.pokeSetName {
+/* .pokeSetName {
     padding-left: 70px;
     padding-top: 15px;
-}
+} */
 
-.pokePrice {
+/* .pokePrice {
     padding-left: 70px;
     padding-top: 15px;
-}
+} */
 
-h5 {
+/* h5 {
     padding-left: 70px;
     padding-top: 15px;
+} */
+
+.pokeCard {
+    cursor: pointer;
+    border: none;
+    transform: scale(0.9);
+    border-radius: 12px;
+    /* width: 200px; */
+    /* height: 269px; */
+}
+
+.pokeCard:hover{
+    transform: scale(1);
+    box-shadow: 0 0 5px #fff, 0 0 18px rgb(0, 255, 170), 0 0 40px #0ff;
+}
+
+#setTitle:hover {
+    /* font-size: 66%; */
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #clear-button {
     text-align: center;
-    margin-top: 80px;
-    
-}
-
-.card-img {
-    cursor: pointer;
-}
-
-.card-img:hover{
-    transform: scale(1.2);
-    box-shadow: 0 0 5px #fff, 0 0 18px rgb(0, 255, 170), 0 0 40px #0ff;
-}
-
-#setTitle {
-    font-size: 66%;
-    text-decoration: underline;
-}
-
-#setTitle {
-    cursor: pointer;
 }
 
 /* To make the words and not sit under the card - might use media query */

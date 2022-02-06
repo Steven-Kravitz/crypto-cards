@@ -85,8 +85,7 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
             <div class="col-2 pt-5"><button class="removeBtn btn btn-dark btn-sm" data-id=${pokeID}>Remove</button></div>
         </div>`).appendTo("#deckBuilder")
 
-        $('removeBtn').on('click', `#${pokeID}`, function(event){
-            event.stopPropagation();
+        $('.removeBtn').on('click', function(event){
             console.log(`You clicked button ${pokeID}`)
         })
     

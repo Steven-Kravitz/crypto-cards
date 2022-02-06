@@ -55,18 +55,22 @@ body{
     box-shadow: 0 0 5px #fff, 0 0 18px rgb(0, 255, 170), 0 0 40px #0ff;
 }
 
-#setTitle:hover {
+#poke-name{
+    cursor: default;
+}
+
+.setTitle:hover {
     /* font-size: 66%; */
     text-decoration: underline;
     cursor: pointer;
 }
 
-#clear-button {
-    text-align: center;
+.poke-prices{
+    cursor: default;
 }
 
-.setTitle {
-    cursor: pointer;
+#clear-button {
+    text-align: center;
 }
 
 /* To make the words and not sit under the card - might use media query */

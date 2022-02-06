@@ -43,6 +43,7 @@ body{
 
 #title{
     font-family: 'Orbitron', sans-serif;
+    cursor: default;
 }
 
 #cards-smaller{
@@ -53,6 +54,7 @@ body{
 
 #title-description{
     font-size: 18px;
+    cursor: default;
 }
 
 .fab {

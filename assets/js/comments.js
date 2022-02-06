@@ -36,3 +36,7 @@
 // media queries
 // credit favicon and brand images.
 // change font colour on pages against dark bg? idk if want to keep the white...
+// future dev, having alts for images?
+
+// TO-DO:
+// results, set-results, type-results. bugs/details. spinners. read-me. presentation.

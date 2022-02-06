@@ -1,5 +1,6 @@
 var deckInput= JSON.parse(localStorage.getItem("deckInput"))
 console.log(deckInput);
+// when user searches, goes to search page.
 $("#userSearchBtn").on('click',function(event){
     event.preventDefault();
     userInput= $("#userSearch").val();
@@ -36,45 +37,45 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
         var setId = data.data[j].set.id
         console.log(setId)
         
-
-    $(`<div class="container col" id="card-deck">
-            <div class="row cardInfoContainer" id=${pokeID}>
-            <img class="card-img card" data-id=${pokeID} src="${cardImage}">
-            <h2 class="pokeName" >${pokeName} <br> <span data-setid="${setId}"id='setTitle'>${pokeSetName}</h2>  
-            </div>          
-        </div>
-    </div>`).appendTo("#deckBuilder")
+    // each card that is added to My Deck gets a row with cols inside.
+    $(`<div class="row py-2" id="card-deck">
+            <div class="col-3"><img class="pokeCard" data-id=${pokeID} src="${cardImage}"></div>
+            <div class="col-9 pokeInfo py-4 px-4">
+            <h3>${pokeName}</h3>
+            <h5 class="text-muted" data-setid="${setId}"id='setTitle'>${pokeSetName}</h5>
+            <div id=${pokeID} class="py-3"></div>
+            </div>
+        </div>`).appendTo("#deckBuilder")
     
     if ("normal" in data.data[j].tcgplayer.prices){
         var normalPrices=data.data[j].tcgplayer.prices.normal;
-        $(`<div class=""><h5 class="">Normal Market Price: </h5><p class="pokePrice">${normalPrices.market} USD</p></div>`).appendTo(`#${pokeID}`)
+        $(`<h5>Normal Market Price: ${normalPrices.market} USD</h5>`).appendTo(`#${pokeID}`)
         //console.log("normal is in the price list");
        }
        
        if ("holofoil" in data.data[j].tcgplayer.prices){
         var holofoilPrices=data.data[j].tcgplayer.prices.holofoil;
-        $(`<div class=""><h5 class="">Holofoil Market Price: </h5><p class="pokePrice">${holofoilPrices.market} USD</p></div>`).appendTo(`#${pokeID}`)
+        $(`<h5>Holofoil Market Price: ${holofoilPrices.market} USD</h5>`).appendTo(`#${pokeID}`)
        // console.log("holofoil is in the price list");
        }
 
        if ("reverseHolofoil" in data.data[j].tcgplayer.prices){
         var reverseHolofoilPrices=data.data[j].tcgplayer.prices.reverseHolofoil;
-        $(`<div class=""><h5 class="">Reverse Holofoil Market Price: </h5><p class="pokePrice">${reverseHolofoilPrices.market} USD</p></div>`).appendTo(`#${pokeID}`)
+        $(`<h5>Reverse Holofoil Market Price: ${reverseHolofoilPrices.market} USD</h5>`).appendTo(`#${pokeID}`)
         //console.log("reverseHolofoil is in the price list");
        }
 
        if ("1stEditionHolofoil" in data.data[j].tcgplayer.prices){
         var firststEditionHolofoil=data.data[j].tcgplayer.prices["1stEditionHolofoil"] ;
-        $(`<div class=""><h5 class="">1st Edition Holofoil Market Price: </h5><p class="pokePrice">${firststEditionHolofoil.market} USD</p></div>`).appendTo(`#${pokeID}`)
+        $(`<h5>1st Edition Holofoil Market Price: ${firststEditionHolofoil.market} USD</h5>`).appendTo(`#${pokeID}`)
         //console.log("1stEditionHolofoil is in the price list");
        }
 
        if ("1stEditionNormal" in data.data[j].tcgplayer.prices){
         var firstEditionNormal =data.data[j].tcgplayer.prices["1stEditionNormal"];
-        $(`<div class=""><h5 class="">1st Edition Normal Price: </h5><p class="pokePrice">${firstEditionNormal.market} USD</p></div>`).appendTo(`#${pokeID}`)
+        $(`<h5>1st Edition Normal Price: ${firstEditionNormal.market} USD</h5>`).appendTo(`#${pokeID}`)
         //console.log("1stEditionNormal is in the price list");
        }
-
         // $(`<div class="row">
         //     <p class="pokeName">${pokeName}</p>  
         // `).appendTo(".cardInfoContainer")
@@ -90,8 +91,8 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
     }})
 
     }}
-
-$('.container').on('click','.card-img',function(event){
+// if user clicks on card it'll take them to results page to give more info.
+$('.container').on('click','.pokeCard',function(event){
     console.log(event.target.dataset.id);
     var pokeID=event.target.dataset.id;
     localStorage.setItem('pokeID',JSON.stringify(pokeID));

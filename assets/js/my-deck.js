@@ -22,7 +22,7 @@ var chosenPoke=JSON.parse(localStorage.getItem("pokeID"))
 //load in Crypto Rates
 
 for(var i = 0; i < cryptoTickers.length; i++){
-    fetch('https://rest.coinapi.io/v1/exchangerate/USD/' + cryptoTickers[i] + '?apikey=' + coinAPIKeys[2])
+    fetch('https://rest.coinapi.io/v1/exchangerate/USD/' + cryptoTickers[i] + '?apikey=' + coinAPIKeys[3])
         .then(function(response){
             return response.json();
         }).then(function(data){
@@ -47,6 +47,7 @@ $("#userSearchBtn").on('click',function(event){
 
 getCards(deckInput);
 function getCards(deckInput){
+
     for(i=0; i < deckInput.length; i++){
 // Getting the first 250 cards
 console.log(deckInput[i]);
@@ -62,6 +63,7 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
     })
 // Drilling down to the first entry
     .then(function(data){
+
         for (j = 0; j < data.data.length; j++){
         console.log(data.data[j]);
         // console.log(data.data[j].name)
@@ -82,11 +84,19 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
                 <h5 class="setTitle text-muted" data-setid="${setId}">${pokeSetName}</h5>
                 <div id=${pokeID} class="py-3 poke-prices"></div>
             </div>
-            <div class="col-2 pt-5"><button class="removeBtn btn btn-dark btn-sm" data-id=${pokeID}>Remove</button></div>
+            <div class="col-2 pt-5"><button class="removeBtn btn btn-dark btn-sm" data-id=${pokeID} id=${pokeID}>Remove</button></div>
         </div>`).appendTo("#deckBuilder")
 
-        $('.removeBtn').on('click', function(event){
-            console.log(`You clicked button ${pokeID}`)
+        $(`.removeBtn`).on('click', function(event){
+            if (event.target.id === pokeID){
+                deckInput.splice(deckInput.indexOf(event.target.id), 1)
+                localStorage.setItem("deckInput", JSON.stringify(deckInput))
+                location.reload();
+            } else{
+                console.log("else")
+            }
+
+            console.log(pokeID)
         })
     
     if ("normal" in data.data[j].tcgplayer.prices){
@@ -179,6 +189,8 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
         //console.log("1stEditionNormal is in the price list");
 
        }
+       
+
         // $(`<div class="row">
         //     <p class="pokeName">${pokeName}</p>  
         // `).appendTo(".cardInfoContainer")
@@ -191,7 +203,8 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=id:${deckInput[i]}`,{
                 
                 window.location.assign(href="set-results.html")
         });
-    }})
+    }
+})
 
     }}
 // if user clicks on card it'll take them to results page to give more info.

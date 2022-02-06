@@ -31,3 +31,5 @@
 
 // TO-DO:
 // results, set-results, type-results. bugs/details. spinners. read-me. presentation.
+
+// fix price description in my deck. jen is working on that page rn so can't touch.

@@ -58,7 +58,7 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
         // poke image
        $(`<img src="${imageURL}" alt="pokemon card" id="poke-pic" class="my-4">`).appendTo("#poke-image");
        // poké detail
-       $(`<h2 id="poke-name" class="mt-5 mb-3">${pokeName}</h2>
+       $(`<h2 id="poke-name" class="mt-5 mb-3">${pokeName}  </h2>
             <h5 class="text-muted mb-3">${pokeSetName}</h5>
             <div class="my-2">
                 <h5 id="mp-tcg-title">Market Price by TCGplayer (◍ㅇᆽㅇ◍)</h5>
@@ -104,9 +104,7 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
                  break;
                  default:
                  };
-         
-            var buyURL=data.data.tcgplayer.url;
-            $(`<a href="${buyURL}" target="_blank">Buy now from TCGPlayer!</a>`).appendTo(".line1TCG");
+
 
        if ("normal" in data.data.tcgplayer.prices){
         var normalPrices = data.data.tcgplayer.prices.normal;

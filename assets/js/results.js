@@ -213,7 +213,7 @@ $("#userSearchBtn").on('click',function(event){
     window.location.assign(href="search.html")
 })
 
-$(".deckBtn").on('click', function(event){
+$("#poke-detail").on('click', ".deckBtn", function(event){
     event.preventDefault();
     var deckInput= JSON.parse(localStorage.getItem("deckInput")) || []
     // var deckInputExist

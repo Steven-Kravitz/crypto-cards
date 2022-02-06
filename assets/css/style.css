@@ -61,6 +61,10 @@ body{
     font-size: 21px;
 }
 
+/* .form-control::placeholder {
+    color: white;
+} */
+
 /* .fas { */
     /* font-size: 30px; */
 /* } */
@@ -84,7 +88,3 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 } */
-
-.form-control::placeholder {
-    color: white;
-}

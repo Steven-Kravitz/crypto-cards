@@ -36,3 +36,4 @@
 
 // what if user adds multiple of the same card to deck?
 // ERROR MESSAGE IF USER TYPES POKE NAME WRONG IN SEARCH.
+// change all input boxes to black with white text, border black.

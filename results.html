@@ -25,10 +25,12 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
     <link rel="stylesheet" href="assets/css/results.css"/>
 </head>
-<!-- spinner I'm assuming? -->
-<body onload="myFunction()" style="margin:0;">
+
+<!-- <body onload="myFunction()" style="margin:0;">
   <div id="loader"></div>
-  <div id="myDiv"></div>
+  <div id="myDiv"> -->
+
+<body>
     <header>
       <nav class="navbar navbar-expand navbar-dark">
         <a class="navbar-brand ml-2">
@@ -55,6 +57,14 @@
       </nav>
     </header>
 
+    <!-- <div class="text-center">
+      <h5>Fetching Pokémon...
+        <div class="spinner-border text-light" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </h5>
+    </div> -->
+
     <div id="pokeinfo-container" class="container">
         <div class="row">
             <!-- image div -->
@@ -64,8 +74,9 @@
         </div>
     </div>
 
-  <!-- rest of the spinner I believe? -->
-  <script>
+  <!-- </div> -->
+  
+  <!-- <script>
     var myVar;
     
     function myFunction() {
@@ -77,8 +88,7 @@
       document.getElementById("loader").style.display = "none";
       document.getElementById("myDiv").style.display = "block";
     }
-    </script>
-
+    </script> -->
 
   <!-- jquery link -->
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

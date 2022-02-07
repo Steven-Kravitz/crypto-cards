@@ -1,37 +1,15 @@
 body{
     background-color: #1D1E26;
-    /* #0D0D0D #1D1E26 */
+    color: whitesmoke;
+}
+
+nav{
     font-family: 'Manrope', sans-serif;
 }
 
-.pokes{
-    width: 250px;
-    height: 350px;
-    cursor: pointer;
-    border-radius: 12px;
-    border: none;
-}
-
-.pokes:hover {
-    transform: scale(1.10);
-    box-shadow: 0 0 5px #fff, 0 0 19px #f0f, 0 0 40px #0ff;
-    /* inset 0px 0px 8px rgb(198, 170, 204), 0 0 15px rgb(198, 170, 204); */
-    /* 0 0 60px 30px #fff,  inner white
-    0 0 100px 60px #f0f, middle magenta
-    0 0 140px 90px #0ff; outer cyan */
-}
-
-.m-n1{
-    margin: 20px 20px 20px 20px;
-}
-
-/* makes last row line up w rest of cards. */
-#change {
-    max-width:280px;
-    height:400px;
-    margin: 0
-}
-
-h1{
-    color: white;
+#error{
+    letter-spacing: 1.3px;
+    font-size: 24px;
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    cursor: default;
 }

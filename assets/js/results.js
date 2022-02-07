@@ -116,9 +116,9 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
             //console.log(cryptoInfo[dummy]);
             normalPriceInCrypto[dummy]=(normalPrices.market)*(cryptoInfo[dummy]);
         }
-        $(`<p>Bitcoin Price: ${(normalPriceInCrypto.BTC).toFixed(5)} BTC</p>`).appendTo("#poke-prices")
-        $(`<p>Ethereum Price: ${(normalPriceInCrypto.ETH).toFixed(5)} ETH</p>`).appendTo("#poke-prices")
-        $(`<p>Tether Price: ${(normalPriceInCrypto.USDT).toFixed(5)} USDT</p>`).appendTo("#poke-prices")
+        $(`<h5>Bitcoin: ${(normalPriceInCrypto.BTC).toFixed(5)} BTC</h5>`).appendTo("#poke-prices")
+        $(`<h5>Ethereum: ${(normalPriceInCrypto.ETH).toFixed(5)} ETH</h5>`).appendTo("#poke-prices")
+        $(`<h5>Tether: ${(normalPriceInCrypto.USDT).toFixed(5)} USDT</h5>`).appendTo("#poke-prices")
         //console.log("normal is in the price list");
        }
        
@@ -131,9 +131,9 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
             //console.log(cryptoInfo[dummy]);
             holofoilPriceInCrypto[dummy]=(holofoilPrices.market)*(cryptoInfo[dummy]);
         }
-        $(`<p>Bitcoin Price: ${(holofoilPriceInCrypto.BTC).toFixed(5)} BTC</p>`).appendTo("#poke-prices")
-        $(`<p>Ethereum Price: ${(holofoilPriceInCrypto.ETH).toFixed(5)} ETH</p>`).appendTo("#poke-prices")
-        $(`<p>Tether Price: ${(holofoilPriceInCrypto.USDT).toFixed(5)} USDT</p>`).appendTo("#poke-prices")
+        $(`<h5>Bitcoin: ${(holofoilPriceInCrypto.BTC).toFixed(5)} BTC</h5>`).appendTo("#poke-prices")
+        $(`<h5>Ethereum: ${(holofoilPriceInCrypto.ETH).toFixed(5)} ETH</h5>`).appendTo("#poke-prices")
+        $(`<h5>Tether: ${(holofoilPriceInCrypto.USDT).toFixed(5)} USDT</h5>`).appendTo("#poke-prices")
        // console.log("holofoil is in the price list");
        }
 
@@ -147,9 +147,9 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
             //console.log(cryptoInfo[dummy]);
             reverseHolofoilPriceInCrypto[dummy]=(reverseHolofoilPrices.market)*(cryptoInfo[dummy]);
         }
-        $(`<p>Bitcoin Price: ${(reverseHolofoilPriceInCrypto.BTC).toFixed(5)} BTC</p>`).appendTo("#poke-prices")
-        $(`<p>Ethereum Price: ${(reverseHolofoilPriceInCrypto.ETH).toFixed(5)} ETH</p>`).appendTo("#poke-prices")
-        $(`<p>Tether Price: ${(reverseHolofoilPriceInCrypto.USDT).toFixed(5)} USDT</p>`).appendTo("#poke-prices")
+        $(`<h5>Bitcoin: ${(reverseHolofoilPriceInCrypto.BTC).toFixed(5)} BTC</h5>`).appendTo("#poke-prices")
+        $(`<h5>Ethereum: ${(reverseHolofoilPriceInCrypto.ETH).toFixed(5)} ETH</h5>`).appendTo("#poke-prices")
+        $(`<h5>Tether: ${(reverseHolofoilPriceInCrypto.USDT).toFixed(5)} USDT</h5>`).appendTo("#poke-prices")
 
         //console.log("reverseHolofoil is in the price list");
        }
@@ -164,9 +164,9 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
             //console.log(cryptoInfo[dummy]);
             firststEditionHolofoilHolofoilPriceInCrypto[dummy]=(firststEditionHolofoil.market)*(cryptoInfo[dummy]);
         }
-        $(`<p>Bitcoin Price: ${(firststEditionHolofoilHolofoilPriceInCrypto.BTC).toFixed(5)} BTC</p>`).appendTo("#poke-prices")
-        $(`<p>Ethereum Price: ${(firststEditionHolofoilHolofoilPriceInCrypto.ETH).toFixed(5)} ETH</p>`).appendTo("#poke-prices")
-        $(`<p>Tether Price: ${(firststEditionHolofoilHolofoilPriceInCrypto.USDT).toFixed(5)} USDT</p>`).appendTo("#poke-prices")
+        $(`<h5>Bitcoin: ${(firststEditionHolofoilHolofoilPriceInCrypto.BTC).toFixed(5)} BTC</h5>`).appendTo("#poke-prices")
+        $(`<h5>Ethereum: ${(firststEditionHolofoilHolofoilPriceInCrypto.ETH).toFixed(5)} ETH</h5>`).appendTo("#poke-prices")
+        $(`<h5>Tether: ${(firststEditionHolofoilHolofoilPriceInCrypto.USDT).toFixed(5)} USDT</h5>`).appendTo("#poke-prices")
 
         //console.log("1stEditionHolofoil is in the price list");
        }
@@ -181,9 +181,9 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
             console.log(cryptoInfo[dummy]);
             firstEditionNormalPriceInCrypto[dummy]=(firstEditionNormal.market)*(cryptoInfo[dummy]);
         }
-        $(`<p>Bitcoin Price: ${(firstEditionNormalPriceInCrypto.BTC).toFixed(5)} BTC</p>`).appendTo("#poke-prices")
-        $(`<p>Ethereum Price: ${(firstEditionNormalPriceInCrypto.ETH).toFixed(5)} ETH</p>`).appendTo("#poke-prices")
-        $(`<p>Tether Price: ${(firstEditionNormalPriceInCrypto.USDT).toFixed(5)} USDT</p>`).appendTo("#poke-prices")
+        $(`<h5>Bitcoin: ${(firstEditionNormalPriceInCrypto.BTC).toFixed(5)} BTC</h5>`).appendTo("#poke-prices")
+        $(`<h5>Ethereum: ${(firstEditionNormalPriceInCrypto.ETH).toFixed(5)} ETH</h5>`).appendTo("#poke-prices")
+        $(`<h5>Tether: ${(firstEditionNormalPriceInCrypto.USDT).toFixed(5)} USDT</h5>`).appendTo("#poke-prices")
         //console.log("1stEditionNormal is in the price list");
        }
        if ("unlimitedHolofoil" in data.data.tcgplayer.prices){
@@ -196,9 +196,9 @@ fetch(`https://api.pokemontcg.io/v2/cards/${chosenPoke}`,{
             console.log(cryptoInfo[dummy]);
             unlimitedHolofoilPriceInCrypto[dummy]=(unlimitedHolofoil.market)*(cryptoInfo[dummy]);
         }
-        $(`<p>Bitcoin Price: ${(unlimitedHolofoilPriceInCrypto.BTC).toFixed(5)} BTC</p>`).appendTo("#poke-prices")
-        $(`<p>Ethereum Price: ${(unlimitedHolofoilPriceInCrypto.ETH).toFixed(5)} ETH</p>`).appendTo("#poke-prices")
-        $(`<p>Tether Price: ${(unlimitedHolofoilPriceInCrypto.USDT).toFixed(5)} USDT</p>`).appendTo("#poke-prices")
+        $(`<h5>Bitcoin: ${(unlimitedHolofoilPriceInCrypto.BTC).toFixed(5)} BTC</h5>`).appendTo("#poke-prices")
+        $(`<h5>Ethereum: ${(unlimitedHolofoilPriceInCrypto.ETH).toFixed(5)} ETH</h5>`).appendTo("#poke-prices")
+        $(`<h5>Tether: ${(unlimitedHolofoilPriceInCrypto.USDT).toFixed(5)} USDT</h5>`).appendTo("#poke-prices")
         //console.log("unlimitedHolofoil is in the price list");
        };
        

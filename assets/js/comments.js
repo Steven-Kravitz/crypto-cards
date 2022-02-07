@@ -20,4 +20,4 @@
 // future dev, having alts for images?
 
 
-// still media queries- should prob apply the mobile search bar to all applicable pages.
+// MEDIA QUERY**********

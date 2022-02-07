@@ -4,6 +4,10 @@ body{
     font-family: 'Manrope', sans-serif;
 }
 
+.form-control{
+    border: black;
+}
+
 .pokes{
     width: 250px;
     height: 350px;

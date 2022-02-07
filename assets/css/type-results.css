@@ -3,6 +3,10 @@ body{
     font-family: 'Manrope', sans-serif;
 }
 
+.form-control{
+    border: black;
+}
+
 .type-name {
     text-align: center;
     color: whitesmoke;

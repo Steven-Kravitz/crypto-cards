@@ -61,6 +61,10 @@ body{
     font-size: 21px;
 }
 
+.form-control{
+    border: black;
+}
+
 /* .fas { */
     /* font-size: 30px; */
 /* } */

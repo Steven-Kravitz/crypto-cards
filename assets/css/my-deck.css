@@ -1,7 +1,10 @@
-
 body{
     background-color: #1D1E26;
     font-family: 'Manrope', sans-serif;
+}
+
+.form-control{
+    border: black;
 }
 
 /* setting font color to white for now so I could see it against the black bg while I'm working lol. */
@@ -70,15 +73,11 @@ body{
     cursor: default;
 }
 
-#clear-button {
-    text-align: center;
-}
-
-#mobileSearch {
+/* #mobileSearch {
     display: none;
-}
+} */
 
-@media screen and (max-width: 497px) {
+/* @media screen and (max-width: 497px) {
     #desktopSearch{
         display: none;
     }
@@ -86,7 +85,7 @@ body{
         display: flex;
     }
     
-}
+} */
 
 /* To make the words and not sit under the card - might use media query */
 /* @media (max-width: 990px) {

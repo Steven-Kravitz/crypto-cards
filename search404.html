@@ -35,12 +35,15 @@
   <body>
     <!-- NAV -->
     <header>
-      <nav class="navbar navbar-expand navbar-dark">
-        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
-          <a class="navbar-brand ml-2">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand" href="index.html">
             <img src="assets/img/brand_ampharos.gif" width="40" height="40" alt="ampharos">
           </a>
-          <ul class="navbar-nav mr-auto">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggle" aria-controls="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar-toggle">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
               <a class="nav-link" href="index.html">Home</a>
             </li>
@@ -54,14 +57,12 @@
               <a class="nav-link" href="type.html">Pokémon by Type</a>
             </li>
           </ul>
-        <!-- </div> -->
-          <form class="form-inline ml-auto">
-            <input class="form-control mr-2" id="userSearch" type="search" placeholder="Search for Pokémon" aria-label="Search">
-            <button class="btn btn-dark" id="userSearchBtn" type="submit">Go!</button>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2 bg-dark text-white" id="userSearch" type="search" placeholder="Search for Pokémon" aria-label="Search">
+            <button class="btn btn-dark my-2 my-sm-0" id="userSearchBtn" type="submit">Go!</button>
           </form>
+          </div>
       </nav>
-      <!-- NOTE/BUG: including the collapsenav moves the searchbar to right, but including the collapsenav does some weird things (collapses nav/makes it disappear) when you make the window smaller. -->
-
     </header>
 
     <div id="error" class="container text-center mt-4">
@@ -71,9 +72,12 @@
 
     
   <!-- jquery link -->
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
   <!-- jqueryui link -->
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <!-- our js link -->
   <script src="assets/js/search404.js"></script>
   </body>

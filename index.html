@@ -24,7 +24,6 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
-    
     <!-- jquery ui css -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
     <!-- our css -->
@@ -34,26 +33,29 @@
   <body>
     <!-- NAV -->
     <header>
-      <nav class="navbar navbar-expand navbar-dark">
-        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
-          <a class="navbar-brand ml-2">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand" href="index.html">
             <img src="assets/img/brand_ampharos.gif" width="40" height="40" alt="ampharos">
           </a>
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="my-deck.html">My Deck</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="set.html">Pokémon by Set</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="type.html">Pokémon by Type</a>
-            </li>
-          </ul>
-        <!-- </div> -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggle" aria-controls="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar-toggle">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="my-deck.html">My Deck</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="set.html">Pokémon by Set</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="type.html">Pokémon by Type</a>
+              </li>
+            </ul>
+        </div>
       </nav>
     </header>
 
@@ -68,13 +70,21 @@
     </div>
   <!-- class="form-inline justify-content-center my-2 my-lg-0" -->
 
+
     <!-- jquery link -->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
     <!-- jqueryui link -->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script> -->
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <!-- our js link -->
     <script src="assets/js/script.js"></script>
+
   </body>
+
 </html>
 
 <!-- <i class="fas fa-coins"></i> -->

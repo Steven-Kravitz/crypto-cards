@@ -3,6 +3,10 @@ body{
     color: whitesmoke;
 }
 
+.form-control{
+    border: black;
+}
+
 nav{
     font-family: 'Manrope', sans-serif;
 }

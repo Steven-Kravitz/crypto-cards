@@ -3,6 +3,10 @@ body{
     font-family: 'Manrope', sans-serif;
 }
 
+.form-control{
+    border: black;
+}
+
 /* title of page */
 #sets-header{
     color: whitesmoke;

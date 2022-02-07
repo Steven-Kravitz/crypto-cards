@@ -4,6 +4,7 @@
 // ** When you click on tab in nav and go to the page, should be highlighted in the nav to let user know which page they’re on.💟
 // f*ck around with the search cards container later.🤎
 // change clear my deck btn, right now its btn-secondary.💚
+// ERROR MESSAGE IF USER TYPES POKE NAME WRONG IN SEARCH.🤎
 
 
 
@@ -20,11 +21,8 @@
 // future dev, having alts for images?
 
 
-// ERROR MESSAGE IF USER TYPES POKE NAME WRONG IN SEARCH.🤎
-
-
-
 // still media queries- should prob apply the mobile search bar to all applicable pages.
 // fix price description in my deck. jen is working on that page rn so can't touch.
 // change all input boxes to black with white text, border black.
 // consider navbar collapse feature.
+// format brypto prices. (h5 instead of p)

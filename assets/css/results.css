@@ -3,6 +3,10 @@ body{
   font-family: 'Manrope', sans-serif;
 }
 
+.form-control{
+  border: black;
+}
+
 #poke-pic{
   width: 445px;
   border: none;
